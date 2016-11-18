@@ -1,0 +1,13 @@
+<h1> index </h1>
+
+<ul>
+  <% @concerts.each do |concert| %>
+    <li>
+		<p> 		<%= concert.inspect %></p>
+		<%= "ICI C LE NOM #{concert.name}" %>
+		<p><%= concert.name %></p>
+		<%= link_to "Show", concert_path(concert) %> <br/> 
+		<%= link_to "Edit", edit_concert_path(concert) %>
+	</li>
+  <% end %>
+</ul>
