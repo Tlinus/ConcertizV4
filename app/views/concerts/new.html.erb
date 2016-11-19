@@ -19,16 +19,18 @@
 
 	<%= f.label :nom %>
 	<%= f.text_field :name %>
-	<%= f.label :genreid %>
-	<%= f.text_field :genre_id %>
-
-		<%= f.fields_for :genre do |ff| %>
-			<div>
-				<%= ff.label :nomdugenre %>
-				<%= ff.text_field :nom %>
-			</div>
-		<% end %>
-
+	<%= f.select(:genre_id) do %>
+	<% 		@genres.each do |g|	%>
+	<%=  		content_tag(:option, g.nom, value: g.id) %>
+	<% 		end
+		end %>
+<!--
+	<select >
+		<%= @genres.each do |g| %>
+			<option value = <%= g.id %>><%= g.nom %> </option>
+		<%	end %>
+	</select>
+-->
 	<%= f.submit "Créer" %>
 <% end %>
 

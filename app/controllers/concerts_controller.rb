@@ -21,12 +21,14 @@ class ConcertsController < ApplicationController
 		@artiste = Artiste.new
 		@typesplace = Typesplace.new
 		@place = Place.new
+		@genres = Genre.all
 	end
 
 	def create
+		@genres = Genre.all
 		@concert = Concert.new(concert_params)
 		@concert.save
-		@concert.update(:genre_attributes => {:nom => 'testValue'})
+	#	@concert.update(:genre_attributes => {:nom => 'testValue'})
 		if @concert.save
 			redirect_to @concert
 		else

@@ -4,16 +4,18 @@ class GenresController < ApplicationController
   end
 
   def new
+	@genres = Genre.all
 	@genre = Genre.new
 	@concert = Concert.new
   end
 
   def create
+	@genres = Genre.all
 	@genre = Genre.new(genre_params)
 	@genre.save
 #	@genre.update(:concert_attributes => {:nom => "testValue"})
-	if @genre.save && @genre.save
-		redirect_to "concerts#new"
+	if @genre.save
+		redirect_to "http://localhost:3000/new"
 	else
 		redirect_to :back
 	end
