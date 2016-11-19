@@ -10,6 +10,4 @@ class Concert < ActiveRecord::Base
 		self[:name] = attributes[:name]
 	end
 	
-	
-	
 end

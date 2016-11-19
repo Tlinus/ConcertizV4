@@ -1,8 +1,35 @@
 <h1> new </h1>
 
-<%= form_for :bank do |f| %>
+<%= form_for :concert, url: concerts_path do |f| %>
+
+	<% if @concert.errors.any? %>
+		<div id="error_explanation">
+			<h2>
+				<%= pluralize(@concert.errors.count, "error") %> prohibited
+				this concert from being saved:
+			</h2>
+			<ul>
+				<% @concert.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+
 	<%= f.label :nom %>
 	<%= f.text_field :name %>
-	<%= f.submit "Create" %>
-  
-<% end %>  
+	<%= f.label :genreid %>
+	<%= f.text_field :genre_id %>
+
+		<%= f.fields_for :genre do |ff| %>
+			<div>
+				<%= ff.label :nomdugenre %>
+				<%= ff.text_field :nom %>
+			</div>
+		<% end %>
+
+	<%= f.submit "Créer" %>
+<% end %>
+
+<%= link_to 'Liste des concerts', concerts_path %>

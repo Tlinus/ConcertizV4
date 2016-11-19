@@ -1,7 +1,6 @@
 class Genre < ActiveRecord::Base
 	has_many :concerts
-	
-	attr_accessor :nom
+	#accepts_nested_attributes_for :concert
 	
 	def initialize(attributes = {})
 		super

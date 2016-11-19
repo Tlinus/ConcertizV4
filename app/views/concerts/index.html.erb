@@ -1,13 +1,76 @@
-<h1> index </h1>
+<a href="http://localhost:3000/new"> 
+	Creer un Concert ! 
+</a> <br/>
+<a href="http://localhost:3000/genres/new"> 
+	Creer un Genre !
+</a>
 
+<h1> Concerts </h1>
 <ul>
   <% @concerts.each do |concert| %>
     <li>
-		<p> 		<%= concert.inspect %></p>
-		<%= "ICI C LE NOM #{concert.name}" %>
-		<p><%= concert.name %></p>
+		<p><%= concert.inspect %></p>
+		<p><%= "Nom du concert : #{concert.name}" %></p>
+<!-- Code affreux pour afficher le genre -->		
+		<% @genres.each do |genre| %>
+			<% 	if genre.id == concert.genre_id %>
+			<p><%= 	"Genre du concert :	#{genre.nom}" %></p>
+			<% end %>
+		<% end %>
+  
 		<%= link_to "Show", concert_path(concert) %> <br/> 
-		<%= link_to "Edit", edit_concert_path(concert) %>
+		<%= link_to "Edit", edit_concert_path(concert) %><br/>
+		<%= link_to "Destroy", concert_path(concert),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+			
 	</li>
   <% end %>
 </ul>
+
+<h1> Genres </h1>
+<ul>
+  <% @genres.each do |genre| %>
+    <li>
+		<p><%= genre.inspect %></p>
+		<p><%= genre.nom %></p>
+	</li>
+	<%= link_to "Show", genre_path(genre) %> <br/> 
+		<%= link_to "Edit", edit_genre_path(genre) %><br/>
+		<%= link_to "Destroy", genre_path(genre),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
+
+<h1> Artistes </h1>
+<ul>
+  <% @artistes.each do |artiste| %>
+    <li>
+		<p><%= artiste.inspect %></p>
+		<p><%= artiste.nom %></p>
+	</li>
+  <% end %>
+</ul>
+
+<h1> Typesplaces </h1>
+<ul>
+  <% @typesplaces.each do |typeplace| %>
+    <li>
+		<p><%= typeplace.inspect %></p>
+		<p><%= typeplace.nom %></p>
+	</li>
+  <% end %>
+</ul>
+
+<h1> Places </h1>
+<ul>
+  <% @places.each do |place| %>
+    <li>
+		<p><%= place.inspect %></p>
+		<p><%= place.prix %></p>
+		<p><%= place.places %></p>
+	</li>
+  <% end %>
+</ul>
+

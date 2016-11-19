@@ -1,13 +1,13 @@
 <h1> edit </h1>
 
-<%= form_for :concert, url: concert_path(@concert), method: patch do |c| %>
+<%= form_for :concert, url: concert_path(@concert), method: :patch do |c| %>
 	
 	<p>
 		<%= c.label :name %><br>
 		<%= c.text_field :name %>
 	</p>
 	<p>
-		<%= c.label :genre_id %>
+		<%= c.label :genreid %>
 		<%= c.text_field :genre_id %>
 	</p>
 	<p>
@@ -16,4 +16,4 @@
 	
 <% end %>
 
-<%= link_to 'Back', concert_path %>
+<%= link_to 'Back', concerts_path %>

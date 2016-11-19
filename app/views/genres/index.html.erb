@@ -1,0 +1,15 @@
+<h1> Genres </h1>
+<ul>
+  <% @genres.each do |genre| %>
+    <li>
+		<p><%= genre.inspect %></p>
+		<p><%= genre.nom %></p>
+	</li>
+	<%= link_to "Show", genre_path(genre) %> <br/> 
+		<%= link_to "Edit", edit_genre_path(genre) %><br/>
+		<%= link_to "Destroy", genre_path(genre),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
+<%= link_to 'Liste concerts', concerts_path %>
