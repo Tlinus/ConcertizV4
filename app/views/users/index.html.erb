@@ -25,3 +25,14 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+
+<% if logged_in? &&  current_user.isadmin? %>
+  <%= "Vous êtes logger" %>
+  <%= "Admin Power is On" %>
+<% end %>
+
+<% if logged_in?  %>
+  <%= "Vous êtes logger en tant qu'#{current_user.username}" %>
+<%= session[:user] %>
+<% end %>
+
