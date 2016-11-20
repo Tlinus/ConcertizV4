@@ -57,3 +57,5 @@ class SeancesController < ApplicationController
 	end
 
 end
+
+

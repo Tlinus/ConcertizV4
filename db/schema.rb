@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161120001015) do
+ActiveRecord::Schema.define(version: 20161120013700) do
 
   create_table "artistes", force: :cascade do |t|
     t.string "nom"
@@ -23,14 +23,6 @@ ActiveRecord::Schema.define(version: 20161120001015) do
     t.integer "compte_id"
     t.index ["compte_id"], name: "index_commentaires_on_compte_id"
     t.index ["concert_id"], name: "index_commentaires_on_concert_id"
-  end
-
-  create_table "comptes", force: :cascade do |t|
-    t.string  "username"
-    t.string  "password"
-    t.string  "adresse_mail"
-    t.integer "utilisateur_id"
-    t.index ["utilisateur_id"], name: "index_comptes_on_utilisateur_id"
   end
 
   create_table "concerts", force: :cascade do |t|
@@ -78,14 +70,6 @@ ActiveRecord::Schema.define(version: 20161120001015) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
-  end
-
-  create_table "utilisateurs", force: :cascade do |t|
-    t.string "nom"
-    t.string "prenom"
-    t.string "username"
-    t.string "password"
-    t.string "email"
   end
 
 end
