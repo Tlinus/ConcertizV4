@@ -1,0 +1,15 @@
+<h1> edit </h1>
+
+<%= form_for :reservation, url: reservation_path(@reservation), method: :patch do |c| %>
+	<!--
+	<p>
+		Nombre places : <br>
+		<%= c.text_field :nombre_reservations %>
+	</p>
+	<p>
+		<%= c.submit %>
+	</p>
+	-->
+<% end %>
+
+<%= link_to 'Accueil', concerts_path %>

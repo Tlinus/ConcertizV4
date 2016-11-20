@@ -1,16 +1,29 @@
-<h1> show </h1>
+<h1> Concertiz </h1>
 
 <p>
-	<strong> Title: </strong>
-	<%= @concert.id %>
-</p>
-<p>
-	<strong> Name: </strong>
+	<strong> Nom : </strong>
 	<%= @concert.name %>
 </p>
 <p>
 	<strong> Genre : </strong>
-	<%= @concert.genre_id %>
+	<% @genres.each do |genre| %>
+		<% 	if @concert.genre_id == genre.id %>
+			<%= genre.nom %> <br/>
+		<% end %>
+	<% end %>
+</p>
+<p>
+	<strong> Places disponnibles :</strong><br/>
+	<% @places.each do |place| %>
+		<% 	if @concert.id == place.concert_id %>
+			<%= link_to "Reserver", place_path(place) %> &nbsp <%= place.places %>
+			<% @typesplaces.each do |typeplace| %>
+				<% 	if place.typesplace_id == typeplace.id %>
+					<%= " / #{place.nombre_max_places} : #{typeplace.nom}" %> <br/>
+				<% end %>
+			<% end %>
+		<% end %>
+	<% end %>
 </p>
 
 <%= link_to 'Liste concerts', concerts_path %>

@@ -1,0 +1,9 @@
+<%= form_for :reservation, url: reservations_path do |r| %>
+
+	Nombre de places :
+	<%= r.text_field :nombre_reservations %><br/>
+
+	
+<% end %>
+
+<%= link_to 'Accueil', concerts_path %>

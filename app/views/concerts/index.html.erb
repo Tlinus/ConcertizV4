@@ -16,6 +16,9 @@
 <a href="http://localhost:3000/places/new"> 
 	Creer des places !
 </a><br/>
+<a href="http://localhost:3000/reservations/new"> 
+	Creer des reservations !
+</a><br/>
 
 <h1> Concerts </h1>
 <ul>
@@ -97,6 +100,20 @@
 	<%= link_to "Show", seance_path(seance) %> <br/> 
 		<%= link_to "Edit", edit_seance_path(seance) %><br/>
 		<%= link_to "Destroy", seance_path(seance),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
+<h1> reservations </h1>
+<ul>
+  <% @reservations.each do |reservation| %>
+    <li>
+		<p><%= reservation.inspect %></p>
+		<p><%= reservation.nombre_reservations %></p>
+	</li>
+	<%= link_to "Show", reservation_path(reservation) %> <br/> 
+		<%= link_to "Edit", edit_reservation_path(reservation) %><br/>
+		<%= link_to "Destroy", reservation_path(reservation),
 			method: :delete,
 			data: {confirm: "Etes vous sûr ?"} %>
   <% end %>

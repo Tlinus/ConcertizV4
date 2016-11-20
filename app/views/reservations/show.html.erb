@@ -1,0 +1,17 @@
+<h1> show reservation</h1>
+<!-- 
+	<% @concerts.each do |concert| %>
+		<% 	if @reservation.concert_id == concert.id %>
+			<%= "Concert :	#{concert.name}" %> <br/>
+		<% end %>
+	<% end %>
+	<% @artistes.each do |artiste| %>
+		<% 	if @reservation.artiste_id == artiste.id %>
+			<%= "Artiste :	#{artiste.nom}" %> <br/>
+		<% end %>
+	<% end %>
+-->
+	Nombre places :
+	<%= @reservation.nombre_reservations %>
+
+<%= link_to 'Accueil', concerts_path %>

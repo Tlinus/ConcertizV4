@@ -6,10 +6,14 @@ class ConcertsController < ApplicationController
 		@artistes = Artiste.all
 		@places = Place.all
 		@seances = Seance.all
+		@reservations = Reservation.all
 	end
 
 	def show
 		@concert = Concert.find(params[:id])
+		@places = Place.all
+		@genres = Genre.all
+		@typesplaces = Typesplace.all
 	end
 
 	def edit

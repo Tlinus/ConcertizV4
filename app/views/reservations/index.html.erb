@@ -1,0 +1,15 @@
+<h1> Index Reservation </h1>
+<ul>
+  <% @reservations.each do |reservation| %>
+    <li>
+		<p><%= reservation.inspect %></p>
+		<p><%= reservation.nombre_reservations %></p>
+	</li>
+	<%= link_to "Show", reservation_path(reservation) %> <br/> 
+		<%= link_to "Edit", edit_reservation_path(reservation) %><br/>
+		<%= link_to "Destroy", reservation_path(reservation),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
+<%= link_to 'Liste concerts', concerts_path %>

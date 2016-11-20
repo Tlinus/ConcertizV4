@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'seances/new' => 'seances#new'
   get 'places/new' => 'places#new'
   get 'typesplaces/new' => 'typesplaces#new'
+  get 'reservations/new' => 'reservations#new'
   
   get 'concerts(.:format)' => 'concerts#index'
   get 'concerts/:id(.:format)' => 'concerts#show'
@@ -42,7 +43,12 @@ Rails.application.routes.draw do
   get 'places(.:format)' => 'places#index'
   get 'places/:id(.:format)' => 'places#show'
   get 'places/:id(.:format)/edit' => 'places#edit'
-  get 'places/:id(.:format)/delete' => 'places#destroy'
+  get 'places/:id(.:format)/delete' => 'places#destroy'  
+  
+  get 'reservations(.:format)' => 'reservations#index'
+  get 'reservations/:id(.:format)' => 'reservations#show'
+  get 'reservations/:id(.:format)/edit' => 'reservations#edit'
+  get 'reservations/:id(.:format)/delete' => 'reservations#destroy'
   
   resources :concerts
   resources :genres
@@ -50,6 +56,7 @@ Rails.application.routes.draw do
   resources :artistes
   resources :typesplaces
   resources :places
+  resources :reservations
   resources :users
   resources :user_sessions
   

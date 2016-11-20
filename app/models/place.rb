@@ -6,10 +6,12 @@ class Place < ActiveRecord::Base
 	def initialize(attributes = {})
 		super
 		self[:places] = attributes[:places]
+		self[:nombre_max_places] = attributes[:places]
 		self[:prix] = attributes[:prix]
 	end
 	
 	def ajout_place(nombre)
+		@nombre_max_places += nombre
 		self[:places] += nombre
 	end
 	
