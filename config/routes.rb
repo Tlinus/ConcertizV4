@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'concerts_utilisateur/index'
+
+  get 'concerts_utilisateur/show'
+  get 'concerts_utilisateur/:id', to: 'concerts_utilisateur#show'
+
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
   root 'pages#home'
@@ -51,6 +56,7 @@ Rails.application.routes.draw do
   get 'reservations/:id(.:format)/delete' => 'reservations#destroy'
   
   resources :concerts
+  resources :concerts_utilisateur
   resources :genres
   resources :seances
   resources :artistes

@@ -11,11 +11,11 @@
   <body>
   	<div id="nav">
 	    <% if current_user %>
-	      <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-	      <%= link_to "Logout", :logout, method: :post %>
+	      <%= link_to "Editer mon profile", edit_user_path(current_user.id) %>
+	      <%= link_to "Se déconnecter", :logout, method: :post %>
 	    <% else %>
-	      <%= link_to "Register", new_user_path %> |
-	      <%= link_to "Login", :login %>
+	      <%= link_to "S'inscrire", new_user_path %> |
+	      <%= link_to "Se connecter", :login %>
 	    <% end %>
 	  </div>
 	  <div>

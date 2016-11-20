@@ -1,0 +1,14 @@
+<h1> Concerts </h1>
+<ul>
+  <% @concerts.each do |concert| %>
+  	<h3><%= concert.name %></h3>
+
+  	<h5> 	<% @genres.each do |genre| %>
+				<% 	if concert.genre_id == genre.id %>
+					<%= genre.nom %> <br/>
+				<% end %>
+			<% end %>
+	</h5>
+		<%= link_to "Voir", concerts_utilisateur_path(concert) %> <br/> 
+  <% end %>
+</ul>

@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-  # before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # before_action :is_admin, only: [:index]
-  # skip_before_action :require_login, only: [:new, :create]
+  skip_before_action :require_login, only: [:new, :create, :show, :edit, :update]
+  skip_before_action :is_admin, only: [:new, :create, :show, :edit, :update]
 
   # GET /users
   # GET /users.json
@@ -29,17 +30,14 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-<<<<<<< HEAD
     @user.isadmin = 0
     @user.username = @user.username.capitalize
     @user.firstname = @user.firstname.capitalize
     @user.lastname = @user.lastname.capitalize
-=======
->>>>>>> 7e2fd093a3033b7ccf9c55b07c098a679ab09013
 
     respond_to do |format|
       if @user.save
-        redirect_to(root, notice: 'User was successfully created')
+        redirect_to( 'user#show', notice: 'Le nouveau compte à bien été créer.')
         # format.html { redirect_to @user, notice: 'Le nouveau compte à bien été créer.' }
         # format.json { render :show, status: :created, location: @user }
       else
@@ -87,7 +85,7 @@ class UsersController < ApplicationController
     end
     # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :lastname, :firstname, :username, :isadmin)
   end
 
 end

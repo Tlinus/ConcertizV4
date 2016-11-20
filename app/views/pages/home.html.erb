@@ -1,3 +1,4 @@
+<% if logged_in? &&  current_user.isadmin? %>
 <ul>
 	<li>
 		<a href="http://localhost:3000/concerts"> 
@@ -8,3 +9,13 @@
 		</a>
 	</li>
 </ul>
+<% end %>
+
+<% if logged_in?  %>
+  <%= "Vous êtes logger en tant qu'#{current_user.username}" %>
+  <!-- <%= session[:user] %> -->
+<% end %>
+
+<%= test %>
+<%= test1 %>
+<%= test2 %>
