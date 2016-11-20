@@ -1,23 +1,26 @@
 class ReservationsController < ApplicationController
   def index
-	@places = Place.all
-	@typeplaces = Typesplace.all
+	@places = Reservation.all
 	@reservations = Reservation.all
   end
 
   def new
-	@places = Place.all
+	@places = Reservation.all
 	@reservation = Reservation.new
 	@concerts = Concert.all
 	@typesplaces = Typesplace.all
   end
 
   def create
+	@places = Reservation.all
+	@concerts = Concert.all
+	@typesplaces = Typesplace.all
 	@reservation = Reservation.new(reservation_params)
 	@reservation.save
 	if @reservation.save
 		redirect_to "http://localhost:3000/concerts"
-
+	else
+		redirect_to :back
 	end
   end
   
@@ -50,7 +53,7 @@ class ReservationsController < ApplicationController
   
   	private
 	def reservation_params
-		params.require(:reservation).permit(:nombre_reservations, :place_id )
+		params.require(:reservation).permit(:nombre_reservations, :place_id, :compte_id)
 	end
 
 end
