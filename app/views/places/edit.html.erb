@@ -1,0 +1,19 @@
+<h1> edit </h1>
+
+<%= form_for :place, url: place_path(@place), method: :patch do |p| %>
+	
+	<p>
+		<%= p.label :nombreplaces %><br>
+		<%= p.text_field :places %>
+	</p>
+	<p>
+		<%= p.label :prix %><br>
+		<%= p.text_field :prix %>
+	</p>
+	<p>
+		<%= p.submit %>
+	</p>
+	
+<% end %>
+
+<%= link_to 'Accueil', concerts_path %>

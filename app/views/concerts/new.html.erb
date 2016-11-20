@@ -1,36 +1,17 @@
-<h1> new </h1>
+<h1> new concert yolo</h1>
 
 <%= form_for :concert, url: concerts_path do |f| %>
-
-	<% if @concert.errors.any? %>
-		<div id="error_explanation">
-			<h2>
-				<%= pluralize(@concert.errors.count, "error") %> prohibited
-				this concert from being saved:
-			</h2>
-			<ul>
-				<% @concert.errors.full_messages.each do |msg| %>
-				<li><%= msg %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
-
 
 	<%= f.label :nom %>
 	<%= f.text_field :name %>
 	<%= f.select(:genre_id) do %>
+	
 	<% 		@genres.each do |g|	%>
 	<%=  		content_tag(:option, g.nom, value: g.id) %>
 	<% 		end
-		end %>
-<!--
-	<select >
-		<%= @genres.each do |g| %>
-			<option value = <%= g.id %>><%= g.nom %> </option>
-		<%	end %>
-	</select>
--->
+		end 
+	%>
+
 	<%= f.submit "Créer" %>
 <% end %>
 

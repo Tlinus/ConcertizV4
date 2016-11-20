@@ -3,8 +3,6 @@ class Place < ActiveRecord::Base
 	belongs_to :concert
 	has_many :reservations
 	
-	attr_accessor :places, :prix
-	
 	def initialize(attributes = {})
 		super
 		self[:places] = attributes[:places]

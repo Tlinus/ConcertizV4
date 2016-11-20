@@ -1,0 +1,29 @@
+<h1>new place </h1>
+
+<%= form_for :place, url: places_path do |f| %>
+	
+	<%= f.label :nombredeplaces %>
+	<%= f.text_field :places %><br/>
+	<%= f.label :prix %>
+	<%= f.text_field :prix %><br/>
+	
+	<%= f.label :typeplace %>
+	<%= f.select(:typesplace_id) do %>
+	<% 		@typesplaces.each do |t|	%>
+	<%=  		content_tag(:option, t.nom, value: t.id) %>
+	<% 		end
+		end
+	%><br/>
+	
+	<%= f.label :concert %>
+	<%= f.select(:concert_id) do %>
+	<% 		@concerts.each do |c|	%>
+	<%=  		content_tag(:option, c.name, value: c.id) %>
+	<% 		end
+		end
+	%><br/>
+
+	<%= f.submit "Créer" %>
+<% end %>
+
+<%= link_to 'Accueil', concerts_path %>

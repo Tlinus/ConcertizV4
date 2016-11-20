@@ -1,0 +1,15 @@
+<h1> Types typesplaces </h1>
+<ul>
+  <% @typesplaces.each do |typesplace| %>
+    <li>
+		<p><%= typesplace.inspect %></p>
+		<p><%= typesplace.nom %></p>
+	</li>
+	<%= link_to "Show", typesplace_path(typesplace) %> <br/> 
+		<%= link_to "Edit", edit_typesplace_path(typesplace) %><br/>
+		<%= link_to "Destroy", typesplace_path(typesplace),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
+<%= link_to 'Accueil', concerts_path %>

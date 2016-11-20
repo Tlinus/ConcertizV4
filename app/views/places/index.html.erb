@@ -1,0 +1,15 @@
+<h1> Artistes </h1>
+<ul>
+  <% @places.each do |place| %>
+    <li>
+		<p><%= place.inspect %></p>
+		<p><%= place.nom %></p>
+	</li>
+	<%= link_to "Show", place_path(place) %> <br/> 
+		<%= link_to "Edit", edit_place_path(place) %><br/>
+		<%= link_to "Destroy", place_path(place),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
+<%= link_to 'Accueil', concerts_path %>

@@ -1,0 +1,15 @@
+<h1> Seances </h1>
+<ul>
+  <% @seances.each do |seance| %>
+    <li>
+		<p><%= seance.inspect %></p>
+		<p><%= seance.date %></p>
+	</li>
+	<%= link_to "Show", seance_path(seance) %> <br/> 
+		<%= link_to "Edit", edit_seance_path(seance) %><br/>
+		<%= link_to "Destroy", seance_path(seance),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
+<%= link_to 'Liste concerts', concerts_path %>

@@ -1,0 +1,24 @@
+<%= form_for :seance, url: seances_path do |f| %>
+	
+	Date :
+	<%= f.date_select :date %><br/>
+	
+	Concert : 
+	<%= f.select(:concert_id) do %>
+	<% 		@concerts.each do |c|	%>
+	<%=  		content_tag(:option, c.name, value: c.id) %>
+	<% 		end
+		end
+	%><br/>
+	Artiste :
+	<%= f.select(:artiste_id) do %>
+	<% 		@artistes.each do |t|	%>
+	<%=  		content_tag(:option, t.nom, value: t.id) %>
+	<% 		end
+		end
+	%><br/>
+
+	<%= f.submit "Créer" %>
+<% end %>
+
+<%= link_to 'Accueil', concerts_path %>

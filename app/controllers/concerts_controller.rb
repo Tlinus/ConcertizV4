@@ -5,6 +5,7 @@ class ConcertsController < ApplicationController
 		@typesplaces = Typesplace.all
 		@artistes = Artiste.all
 		@places = Place.all
+		@seances = Seance.all
 	end
 
 	def show
@@ -13,6 +14,10 @@ class ConcertsController < ApplicationController
 
 	def edit
 		@concert = Concert.find(params[:id])
+		@genres = Genre.all
+		@artistes = Artiste.all
+		@typesplaces = Typesplace.all
+		@seances = Seance.all
 	end
 
 	def new
@@ -22,6 +27,7 @@ class ConcertsController < ApplicationController
 		@typesplace = Typesplace.new
 		@place = Place.new
 		@genres = Genre.all
+		@seances = Seance.all
 	end
 
 	def create

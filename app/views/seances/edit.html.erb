@@ -1,0 +1,15 @@
+<h1> edit </h1>
+
+<%= form_for :seance, url: seance_path(@seance), method: :patch do |c| %>
+	
+	<p>
+		<%= c.label :date %><br>
+		<%= c.text_field :date %>
+	</p>
+	<p>
+		<%= c.submit %>
+	</p>
+	
+<% end %>
+
+<%= link_to 'Accueil', concerts_path %>

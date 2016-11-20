@@ -1,0 +1,15 @@
+<h1> Artistes </h1>
+<ul>
+  <% @artistes.each do |artiste| %>
+    <li>
+		<p><%= artiste.inspect %></p>
+		<p><%= artiste.nom %></p>
+	</li>
+	<%= link_to "Show", artiste_path(artiste) %> <br/> 
+		<%= link_to "Edit", edit_artiste_path(artiste) %><br/>
+		<%= link_to "Destroy", artiste_path(artiste),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %>
+  <% end %>
+</ul>
+<%= link_to 'Liste concerts', concerts_path %>

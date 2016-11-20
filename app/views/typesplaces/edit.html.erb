@@ -1,0 +1,15 @@
+<h1> edit </h1>
+
+<%= form_for :typesplace, url: typesplace_path(@typesplace), method: :patch do |c| %>
+	
+	<p>
+		<%= c.label :nom %><br>
+		<%= c.text_field :nom %>
+	</p>
+	<p>
+		<%= c.submit %>
+	</p>
+	
+<% end %>
+
+<%= link_to 'Accueil', concerts_path %>

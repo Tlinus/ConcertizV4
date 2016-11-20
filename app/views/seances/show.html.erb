@@ -1,0 +1,16 @@
+<h1> show seance</h1>
+
+	<% @concerts.each do |concert| %>
+		<% 	if @seance.concert_id == concert.id %>
+			<%= "Concert :	#{concert.name}" %> <br/>
+		<% end %>
+	<% end %>
+	<% @artistes.each do |artiste| %>
+		<% 	if @seance.artiste_id == artiste.id %>
+			<%= "Artiste :	#{artiste.nom}" %> <br/>
+		<% end %>
+	<% end %>
+	Date :
+	<%= @seance.date %>
+
+<%= link_to 'Accueil', concerts_path %>
