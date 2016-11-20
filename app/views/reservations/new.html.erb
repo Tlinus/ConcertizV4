@@ -2,8 +2,20 @@
 
 	Nombre de places :
 	<%= r.text_field :nombre_reservations %><br/>
+	Type de places :
+	<%= r.select(:place_id) do %>
+	<% 		@typesplaces.each do |t|	
+	 			@places.each do |p|		
+					if p.typesplace_id == t.id %>	
+	<%= 				content_tag(:option, t.nom, value: p.id) %>
+	<% 				end %>
+<%
+				end
+			end
+		end
+	%><br/>
 
-	
+	<%= r.submit "Créer" %>
 <% end %>
 
 <%= link_to 'Accueil', concerts_path %>

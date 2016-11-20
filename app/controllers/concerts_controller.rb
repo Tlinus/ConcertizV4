@@ -14,6 +14,7 @@ class ConcertsController < ApplicationController
 		@places = Place.all
 		@genres = Genre.all
 		@typesplaces = Typesplace.all
+		@reservation = Reservation.new
 	end
 
 	def edit
