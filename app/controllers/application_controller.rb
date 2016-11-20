@@ -10,9 +10,9 @@ class ApplicationController < ActionController::Base
 	end
 
 	def is_admin
-        unless session[:user][:isadmin] == 1
+        unless(current_user.isadmin?)
           flash[:alert] = "Veuiller vous connecter en tant qu'administrateur."
-          #redirect_to login_path # halts request cycle
+          redirect_to concerts_utilisateur_index_path # halts request cycle
       end
     end
 end

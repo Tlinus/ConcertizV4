@@ -38,8 +38,8 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         redirect_to( 'user#show', notice: 'Le nouveau compte à bien été créer.')
-        # format.html { redirect_to @user, notice: 'Le nouveau compte à bien été créer.' }
-        # format.json { render :show, status: :created, location: @user }
+         format.html { redirect_to @user, notice: 'Le nouveau compte à bien été créer.' }
+         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -76,13 +76,13 @@ class UsersController < ApplicationController
     def set_user
       @user = User.find(params[:id])
     end
-     def is_admin
-          require_login
-        unless session[:user][:isadmin] == 1
-          flash[:alert] = "You must be logged in as admin to access this section"
-          redirect_to login_path # halts request cycle
-      end
-    end
+     # def is_admin
+          # require_login
+        # unless session[:user][:isadmin] == 1
+          # flash[:alert] = "You must be logged in as admin to access this section"
+          # redirect_to login_path # halts request cycle
+      # end
+
     # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation, :lastname, :firstname, :username, :isadmin)
