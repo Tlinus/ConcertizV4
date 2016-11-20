@@ -13,10 +13,12 @@
 	<% end %>
 </p>
 <p>
+
 	<strong> Places disponnibles :</strong><br/>
 	<% @places.each do |place| %>
 		<% 	if @concert.id == place.concert_id %>
-			<%= link_to "Reserver", place_path(place) %> &nbsp <%= place.places %>
+			
+			&nbsp <%= place.places %>
 			<% @typesplaces.each do |typeplace| %>
 				<% 	if place.typesplace_id == typeplace.id %>
 					<%= " / #{place.nombre_max_places} : #{typeplace.nom}" %> <br/>
@@ -25,6 +27,28 @@
 		<% end %>
 	<% end %>
 </p>
+<strong> Reservation : </strong> <br/>
+<%= form_for :reservation, url: reservations_path do |r| %>
+
+	Nombre de places :
+	<%= r.text_field :nombre_reservations %><br/>
+	Type de places :
+	<%= r.select(:place_id) do %>
+	<% 		@typesplaces.each do |t|	
+				@places.each do |p|		
+					if p.typesplace_id == t.id %>	
+	<%= 				content_tag(:option, t.nom, value: p.id) %>
+				<%	end %>
+			<% 	end %>
+	<%= content_tag(:option, t.nom, value: t.id) %>
+	<% 		end
+		end%>
+		<br/>
+	
+
+	<%= r.submit "Créer" %>
+<% end %>
+
 
 <%= link_to 'Liste concerts', concerts_path %>
 <%= link_to 'Ajout places', concerts_path %>
