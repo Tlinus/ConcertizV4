@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+ 
+
+  get 'login' => 'user_sessions#new', :as => :login
+  post 'logout' => 'user_sessions#destroy', :as => :logout
   root 'pages#home'
   
   get 'show' => 'concerts#show'
@@ -48,6 +52,8 @@ Rails.application.routes.draw do
   resources :artistes
   resources :typesplaces
   resources :places
+  resources :users
+  resources :user_sessions
   
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
