@@ -12,8 +12,10 @@ class ConcertsUtilisateurController < ApplicationController
   def show
 	  	@concert = Concert.find(params[:id])
 		@places = Place.all
+		@concerts = Concert.all
 		@genres = Genre.all
 		@typesplaces = Typesplace.all
-		
+		@seances = Seance.all
+		@artistes = Artiste.all
   end
 end

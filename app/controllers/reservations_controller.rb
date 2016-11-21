@@ -16,8 +16,14 @@ class ReservationsController < ApplicationController
 	@reservation = Reservation.new(reservation_params)
 	@reservation.save
 	if @reservation.save
-		redirect_to "http://localhost:3000/concerts"
-
+		@place = Place.find(@reservation.place_id)
+		unless @reservation.nombre_reservations > @place.places
+			@place.places -= @reservation.nombre_reservations
+			@place.save
+			if @place.save
+				redirect_to "http://localhost:3000/concerts"
+			end
+		end
 	end
   end
   

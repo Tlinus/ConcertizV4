@@ -5,6 +5,18 @@
 	<%= @concert.name %>
 </p>
 <p>
+	<strong> Artiste : </strong>
+	<%
+		@seances.each do |s|
+			@artistes.all do |a|
+				if s.concert_id == @concert.id && a.id == s.artiste_id %>
+				<%= a.nom %>
+	<%			end
+			end
+		end
+	%>
+</p>
+<p>
 	<strong> Genre : </strong>
 	<% @genres.each do |genre| %>
 		<% 	if @concert.genre_id == genre.id %>
@@ -36,12 +48,13 @@
 	<%= r.select(:place_id) do %>
 	<% 		@typesplaces.each do |t|	
 				@places.each do |p|		
-					if p.typesplace_id == t.id %>	
-	<%= 				content_tag(:option, t.nom, value: p.id) %>
-				<%	end %>
+					@concerts.each do |c|
+						if @concert.id == c.id && c.id == p.concert_id && p.typesplace_id == t.id %>	
+		<%= 				content_tag(:option, p.id, value: p.id) %>
+					<%	end %>
+				<% 	end %>
 			<% 	end %>
-	<%= content_tag(:option, t.nom, value: t.id) %>
-	<% 		end
+		<% 	end
 		end%>
 		<br/>
 	

@@ -10,11 +10,13 @@ class ConcertsController < ApplicationController
 	end
 
 	def show
-		@concert = Concert.find(params[:id])
+	  	@concert = Concert.find(params[:id])
 		@places = Place.all
+		@concerts = Concert.all
 		@genres = Genre.all
 		@typesplaces = Typesplace.all
-		@reservation = Reservation.new
+		@seances = Seance.all
+		@artistes = Artiste.all
 	end
 
 	def edit
@@ -39,7 +41,6 @@ class ConcertsController < ApplicationController
 		@genres = Genre.all
 		@concert = Concert.new(concert_params)
 		@concert.save
-	#	@concert.update(:genre_attributes => {:nom => 'testValue'})
 		if @concert.save
 			redirect_to @concert
 		else
@@ -62,6 +63,20 @@ class ConcertsController < ApplicationController
 		@concert.destroy
 		
 		redirect_to concerts_path
+	end
+		def ajout_place(nombre)
+		@nombre_max_places += nombre
+		self[:places] += nombre
+	end
+	
+	def reservation_place(nombre)
+		unless nombre > self[:places]
+			self[:places] -= nombre
+		end
+	end
+	
+	def modifier_prix(prix)
+		self[:prix] = prix
 	end
 	
 	private
