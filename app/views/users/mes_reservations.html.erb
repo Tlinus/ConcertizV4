@@ -1,0 +1,35 @@
+<% @reservations.inspect %><br>
+
+
+<% @reservations.each do |r| %>
+	
+	<% place = Place.find(r.place_id) %>
+	<% concert =  Concert.find(place.concert_id) %>
+	<% seance = Seance.find(place.seance_id) %>
+	<% artiste = Artiste.find(seance.artiste_id) %>
+	
+
+	<% #Debug OFF/ON with = ;)%>
+	<% place.inspect %><br>
+	<% concert.inspect %><br>
+	<% seance.inspect %><br>
+<table>
+	<tr>
+		<td>
+			<label>Numero de résérvation:</label>
+			<p>	#<%= r.id %></p>
+			
+		</td>
+		<td>
+			<label>Concert : </label>
+			<p> <%= concert.name %></p>
+		</td>
+		<td>
+			<label>Artiste : </label>
+			<p><%= artiste.nom %></p>
+		</td>
+	</tr>
+</table>	<%= link_to 'Voir cette Réservation en détail', "/reservations/#{r.id}" %>
+
+
+<% end %>

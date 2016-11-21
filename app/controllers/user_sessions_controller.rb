@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
   def create
   	if @user = login(params[:email], params[:password])
       session[:user] = @user
-      redirect_back_or_to(:users, notice: "Vous êtes maintenant connécté en tant que #{current_user.username} !")
+      redirect_back_or_to('/home', notice: "Vous êtes maintenant connécté  !")
     else
       flash.now[:alert] = 'La tentative de connection est un echec ! '
       render action: 'new'
@@ -19,7 +19,7 @@ class UserSessionsController < ApplicationController
 
   def destroy
   	logout
-    redirect_to(:users, notice: 'Vous êtes maintenant déconnécté!')
+    redirect_to('/home', notice: 'Vous êtes maintenant déconnécté!')
   end
 
   private

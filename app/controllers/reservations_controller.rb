@@ -22,7 +22,7 @@ class ReservationsController < ApplicationController
 			@place.places -= @reservation.nombre_reservations
 			@place.save
 			if @place.save
-				redirect_to "http://localhost:3000/concerts"
+				redirect_to @reservation
 			end
 		end
 	end
@@ -45,7 +45,12 @@ class ReservationsController < ApplicationController
 
   def show
 	@reservation = Reservation.find(params[:id])
-	@reservations = Reservation.all
+	
+	@place = Place.find(@reservation.place_id)
+	@seance = Seance.find(@place.seance_id)
+	@artiste = Artiste.find(@seance.artiste_id)
+	@concert = Concert.find(@place.concert_id)
+	@genre = Genre.find(@concert.genre_id)
   end
   
 	def destroy

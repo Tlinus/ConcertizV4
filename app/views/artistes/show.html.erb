@@ -1,12 +1,18 @@
 <h1> show artiste</h1>
 
 <p>
-	<strong> ID: </strong>
-	<%= @artiste.id %>
-</p>
-<p>
 	<strong> Nom: </strong>
 	<%= @artiste.nom %>
 </p>
+<p>
+	<strong>Ses prochaines dates: </strong>
+
+<% seances = Seance.where(artiste_id: @artiste.id) %>
+
+<% seances.each do |s| %>
+	<% concert  = Concert.find(s.concert_id) %>
+
+	<%= link_to "#{concert.name}/#{s.date}", concerts_path(concert) %>
+<% end %>
 
 <%= link_to 'Accueil', concerts_path %>

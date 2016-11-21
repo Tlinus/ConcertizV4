@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  get 'monCompte' => 'users#mes_reservations'
   get 'concerts_utilisateur/index'
 
   get 'concerts_utilisateur/show'

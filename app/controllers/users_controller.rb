@@ -17,6 +17,10 @@ class UsersController < ApplicationController
   def show
   end
 
+  def mes_reservations
+    @reservations = Reservation.where(user_id: current_user.id)
+  end
+
   # GET /users/new
   def new
     @user = User.new
@@ -37,7 +41,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        redirect_to( 'user#show', notice: 'Le nouveau compte à bien été créer.')
+        #redirect_to( 'user#show', notice: 'Le nouveau compte à bien été créer.')
          format.html { redirect_to @user, notice: 'Le nouveau compte à bien été créer.' }
          format.json { render :show, status: :created, location: @user }
       else
@@ -76,12 +80,6 @@ class UsersController < ApplicationController
     def set_user
       @user = User.find(params[:id])
     end
-     # def is_admin
-          # require_login
-        # unless session[:user][:isadmin] == 1
-          # flash[:alert] = "You must be logged in as admin to access this section"
-          # redirect_to login_path # halts request cycle
-      # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
   def user_params

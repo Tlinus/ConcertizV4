@@ -1,4 +1,6 @@
 class ArtistesController < ApplicationController
+	skip_before_action :require_login, only: [:show]
+  skip_before_action :is_admin, only: [:show]
   def index
 	@artistes = Artiste.all
   end
