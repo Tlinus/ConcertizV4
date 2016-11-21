@@ -61,3 +61,12 @@
 
 	<%= r.submit "Créer" %>
 <% end %>
+<% @commentaires.each do |s| %>
+	<div>
+		
+		<p><%= User.find(s.user_id).username %></p>
+		<h6><%= s.texte %></h6>
+	</div><br><br>
+<% end%>
+
+<%= render 'formCommentaire', commentaire: @commentaire %>

@@ -17,5 +17,12 @@ class ConcertsUtilisateurController < ApplicationController
 		@typesplaces = Typesplace.all
 		@seances = Seance.all
 		@artistes = Artiste.all
+        @commentaires = Commentaire.where(concert_id: params[:id])
+        @commentaire = Commentaire.new
+
   end
+
+    def  newCommentaire
+
+    end
 end
