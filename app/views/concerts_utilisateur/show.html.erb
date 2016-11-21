@@ -3,64 +3,67 @@
 <p>
 	<strong> Nom : </strong>
 	<%= @concert.name %>
+
 </p>
 <p>
 	<strong> Artiste : </strong>
-	<%
-		@seances.each do |s|
-			@artistes.all do |a|
-				if s.concert_id == @concert.id && a.id == s.artiste_id %>
-				<%= a.nom %>
-	<%			end
-			end
-		end
-	%>
+<%
+@seance = Seance.find_by(concert_id: @concert.id)
+	@artistes.each do |a|
+		if a.id == @seance.artiste_id %>
+<%= 		a.nom %>
+
+<%      end
+	end
+%>
+
 </p>
 <p>
 	<strong> Genre : </strong>
-	<% @genres.each do |genre| %>
-		<% 	if @concert.genre_id == genre.id %>
-			<%= genre.nom %> <br/>
-		<% end %>
+<% 	@genres.each do |genre| %>
+	<% 	if @concert.genre_id == genre.id %>
+		<%= genre.nom %>
+
 	<% end %>
+<% end %>
 </p>
 <p>
+<strong> Seances : </strong> <br/>
+<%	@seances.each do |seance| %>
+<%		if seance.concert_id == @concert.id %>
+<%=			seance.date %>
+<%
+			@typesplaces.each do |typesplace|
+				@places.each do |place|
+					if place.typesplace_id == typesplace.id && seance.id == place.seance_id  && place.places > 0%>
+<br/><%= 					"Nombre de places en #{typesplace.nom}(#{place.prix} €) : #{place.places} / #{place.nombre_max_places} " %>	
 
-	<strong> Places disponnibles :</strong><br/>
-	<% @places.each do |place| %>
-		<% 	if @concert.id == place.concert_id %>
-			
-			&nbsp <%= place.places %>
-			<% @typesplaces.each do |typeplace| %>
-				<% 	if place.typesplace_id == typeplace.id %>
-					<%= " / #{place.nombre_max_places} : #{typeplace.nom}" %> <br/>
-				<% end %>
-			<% end %>
-		<% end %>
-	<% end %>
-</p>
-<strong> Reservation : </strong> <br/>
-<%= form_for :reservation, url: reservations_path do |r| %>
+					<% if current_user && place.places > 0 %>	
+						<%= form_for :reservation, url: reservations_path do |r| %>
+							Nombre de places :
+							<%= 	r.text_field :nombre_reservations %><br/>
+							<%= 	r.hidden_field(:place_id, :value => place.id) %>
+							<%= 	r.hidden_field(:user_id, :value => current_user.id) %>
+							<%= 	r.submit "Reserver" %>
 
-	Nombre de places :
-	<%= r.text_field :nombre_reservations %><br/>
-	Type de places :
-	<%= r.select(:place_id) do %>
-	<% 		@typesplaces.each do |t|	
-				@places.each do |p|		
-					@concerts.each do |c|
-						if @concert.id == c.id && c.id == p.concert_id && p.typesplace_id == t.id %>	
-		<%= 				content_tag(:option, p.id, value: p.id) %>
-					<%	end %>
-				<% 	end %>
-			<% 	end %>
-		<% 	end
-		end%>
-		<br/>
-	
+	<%					end
+					
+						elsif   place.places > 0  %>
+						<%= form_for :reservation, url: reservations_path do |r| %>
 
-	<%= r.submit "Créer" %>
-<% end %>
+						<%= 	r.submit "Reserver" %>
+						<% end
+						
+					else %>
+						<%= "Nombre de places en #{typesplace.nom}(#{place.prix} €) :Complet" %>
+<%
+					end
+				end
+			end
+		end
+	end
+end
+%>
 <% @commentaires.each do |s| %>
 	<div>
 		

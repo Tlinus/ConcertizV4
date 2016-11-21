@@ -1,9 +1,8 @@
-<h1> Artistes </h1>
+<h1> Places </h1>
 <ul>
   <% @places.each do |place| %>
     <li>
 		<p><%= place.inspect %></p>
-		<p><%= place.nom %></p>
 		<p><%= place.seance_id %></p>
 	</li>
 	<%= link_to "Show", place_path(place) %> <br/> 

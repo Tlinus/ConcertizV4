@@ -36652,3 +36652,2350 @@ Processing by ConcertsController#show as HTML
 Completed 200 OK in 244ms (Views: 220.8ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-11-21 16:30:40 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2734.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to Users (20161121121641)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "commentaires" ADD "user_id" integer[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_commentaires_on_compte_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_commentaires_on_compte_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_commentaires_on_concert_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_commentaires_on_concert_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE  INDEX "index_commentaires_on_user_id" ON "commentaires" ("user_id")[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161121121641"]]
+  [1m[35m (117.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_commentaires_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_commentaires_on_user_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_commentaires_on_compte_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_commentaires_on_compte_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_commentaires_on_concert_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_commentaires_on_concert_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comptes_on_utilisateur_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comptes_on_utilisateur_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_concerts_on_genre_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_concerts_on_genre_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_places_on_seance_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_places_on_seance_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_places_on_typesplace_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_places_on_typesplace_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_places_on_concert_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_places_on_concert_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservations_on_place_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservations_on_place_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservations_on_compte_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservations_on_compte_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_seances_on_artiste_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_seances_on_artiste_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_seances_on_concert_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_seances_on_concert_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2016-11-21 16:32:09 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 4.0ms)
+
+
+  
+SyntaxError (C:/a/ConcertizV4/app/views/layouts/application.html.erb:22: syntax error, unexpected ',', expecting ')'
+...r.append=  form_tag ("/search", method: "get") do @output_bu...
+...                               ^
+C:/a/ConcertizV4/app/views/layouts/application.html.erb:22: syntax error, unexpected ')', expecting keyword_end
+..._tag ("/search", method: "get") do @output_buffer.safe_appen...
+...                               ^
+C:/a/ConcertizV4/app/views/layouts/application.html.erb:37: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/application.html.erb:22: syntax error, unexpected ',', expecting ')'
+app/views/layouts/application.html.erb:22: syntax error, unexpected ')', expecting keyword_end
+app/views/layouts/application.html.erb:37: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (29.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2773.2ms)
+Started GET "/" for 127.0.0.1 at 2016-11-21 16:36:56 +0100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 2376ms (Views: 2337.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=rubyonrails&commit=Search" for 127.0.0.1 at 2016-11-21 16:37:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [132 times] (121.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (55.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3921.2ms)
+Started GET "/search?utf8=%E2%9C%93&q=rubyonrails&commit=Search" for 127.0.0.1 at 2016-11-21 16:37:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [132 times] (113.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3984.2ms)
+Started GET "/" for 127.0.0.1 at 2016-11-21 16:37:55 +0100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1281ms (Views: 427.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-21 16:38:38 +0100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 443ms (Views: 386.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-21 16:39:16 +0100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 393ms (Views: 354.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-21 16:39:43 +0100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 401ms (Views: 365.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/searchs?utf8=%E2%9C%93&q=rubyonrails&commit=Chercher" for 127.0.0.1 at 2016-11-21 16:39:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/searchs"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [132 times] (102.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3854.2ms)
+Started GET "/searchs?utf8=%E2%9C%93&q=rubyonrails&commit=Chercher" for 127.0.0.1 at 2016-11-21 16:41:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/searchs"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [140 times] (112.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3885.2ms)
+Started GET "/searchs?utf8=%E2%9C%93&q=rubyonrails&commit=Chercher" for 127.0.0.1 at 2016-11-21 16:41:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/searchs"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [148 times] (118.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3893.2ms)
+Started GET "/searchs?utf8=%E2%9C%93&q=rubyonrails&commit=Chercher" for 127.0.0.1 at 2016-11-21 16:42:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/searchs"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (24.0ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [148 times] (121.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3837.2ms)
+Started GET "/" for 127.0.0.1 at 2016-11-21 16:42:58 +0100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 445ms (Views: 362.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/search/new?utf8=%E2%9C%93&q=j&commit=Chercher" for 127.0.0.1 at 2016-11-21 16:43:06 +0100
+  
+ActionController::RoutingError (uninitialized constant SearchController):
+  
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.0.1) lib/action_dispatch/http/request.rb:93:in `controller_class'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [148 times] (119.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (4074.2ms)
+Started GET "/" for 127.0.0.1 at 2016-11-21 16:45:00 +0100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 457ms (Views: 376.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/search/new?utf8=%E2%9C%93&q=rez&commit=Chercher" for 127.0.0.1 at 2016-11-21 16:45:04 +0100
+  
+ActionController::RoutingError (uninitialized constant SearchController):
+  
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `const_get'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:268:in `block in constantize'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `each'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `inject'
+activesupport (5.0.0.1) lib/active_support/inflector/methods.rb:266:in `constantize'
+actionpack (5.0.0.1) lib/action_dispatch/http/request.rb:93:in `controller_class'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:30:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered collection of C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [148 times] (118.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (3915.2ms)
+Started GET "/" for 127.0.0.1 at 2016-11-21 16:45:59 +0100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 640ms (ActiveRecord: 5.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_searchs_path' for #<#<Class:0xa70f1a8>:0xa70e470>):
+    19: 	    <% end %>
+    20: 	  </div>
+    21:       <div>
+    22:             <%= form_tag( new_searchs_path , method: "get") do %>
+    23:               <%= label_tag(:q, "Search for:") %>
+    24:               <%= text_field_tag(:q) %>
+    25:               <%= submit_tag("Chercher") %>
+  
+app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb___94779581_87555888'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (38.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (33.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2788.2ms)
+Started GET "/" for 127.0.0.1 at 2016-11-21 16:46:25 +0100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 466ms (Views: 431.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/searchs/new?utf8=%E2%9C%93&q=rez&commit=Chercher" for 127.0.0.1 at 2016-11-21 16:46:31 +0100
+  
+SyntaxError (C:/a/ConcertizV4/app/controllers/searchs_controller.rb:6: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/searchs_controller.rb:6: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (18.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2689.2ms)
+Started GET "/searchs/new?utf8=%E2%9C%93&q=rez&commit=Chercher" for 127.0.0.1 at 2016-11-21 16:47:01 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"rez", "commit"=>"Chercher"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  Rendered searchs/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 422ms (Views: 344.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/searchs/new?utf8=%E2%9C%93&q=rez&commit=Chercher" for 127.0.0.1 at 2016-11-21 16:47:50 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"rez", "commit"=>"Chercher"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  Rendered searchs/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 481ms (Views: 400.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/searchs/new?utf8=%E2%9C%93&q=admin&commit=Chercher" for 127.0.0.1 at 2016-11-21 16:51:43 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"admin", "commit"=>"Chercher"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "admin"]]
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "admin"]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "admin"]]
+  Rendered searchs/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 507ms (Views: 373.7ms | ActiveRecord: 8.0ms)
+
+
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Admin&commit=Chercher" for 127.0.0.1 at 2016-11-21 16:53:13 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Admin", "commit"=>"Chercher"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Admin"]]
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Admin"]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Admin"]]
+  Rendered searchs/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 451ms (Views: 409.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Admin&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:02:43 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Admin", "commit"=>"Chercher"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Admin"]]
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Admin"]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Admin"]]
+  Rendered searchs/new.html.erb within layouts/application (214.0ms)
+Completed 500 Internal Server Error in 341ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `foreach' for #<#<Class:0x9cb0fb8>:0xa80fa68>):
+    3: <%= @concert.inspect %>
+    4: <%= @user.inspect %>
+    5: 
+    6: <% foreach @artiste do |a| %>
+    7: <%=    link_to artisartiste_path(a) %>
+    8: <% end %>
+  
+app/views/searchs/new.html.erb:6:in `_app_views_searchs_new_html_erb___175337700_88138008'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (46.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2783.2ms)
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Admin&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:03:37 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Admin", "commit"=>"Chercher"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Admin"]]
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Admin"]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Admin"]]
+  Rendered searchs/new.html.erb within layouts/application (221.0ms)
+Completed 500 Internal Server Error in 357ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `foreach' for #<#<Class:0x9cb0fb8>:0xaa0e1d0>):
+    3: <%= @concert.inspect %>
+    4: <%= @user.inspect %>
+    5: 
+    6: <% foreach @artiste do |a| %>
+    7: <%=    link_to artiste_path(a) %>
+    8: <% end %>
+    9: 
+  
+app/views/searchs/new.html.erb:6:in `_app_views_searchs_new_html_erb___175337700_89159208'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (27.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2751.2ms)
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Admin&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:04:40 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Admin", "commit"=>"Chercher"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  Rendered searchs/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/a/ConcertizV4/app/views/searchs/new.html.erb:6: syntax error, unexpected keyword_do_block
+'.freeze; foreach @artiste? do |a| 
+                              ^
+C:/a/ConcertizV4/app/views/searchs/new.html.erb:10: syntax error, unexpected keyword_do_block
+'.freeze; foreach @concert? do |a| 
+                              ^
+C:/a/ConcertizV4/app/views/searchs/new.html.erb:12: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze; end 
+             ^):
+  
+app/views/searchs/new.html.erb:6: syntax error, unexpected keyword_do_block
+app/views/searchs/new.html.erb:10: syntax error, unexpected keyword_do_block
+app/views/searchs/new.html.erb:12: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (29.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2736.2ms)
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Admin&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:05:46 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Admin", "commit"=>"Chercher"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Admin"]]
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Admin"]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Admin"]]
+  Rendered searchs/new.html.erb within layouts/application (298.0ms)
+Completed 500 Internal Server Error in 454ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `foreach' for #<#<Class:0x9cb0fb8>:0x9510018>):
+     7: <%=    link_to artiste_path(a) %>
+     8: <% end %>
+     9: 
+    10: <% foreach @concert.each do |a| %>
+    11: <%=    link_to concert_path(a) %>
+    12: <% end %>
+    13: 
+  
+app/views/searchs/new.html.erb:10:in `_app_views_searchs_new_html_erb___175337700_78154692'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (29.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (3107.2ms)
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Admin&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:07:55 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Admin", "commit"=>"Chercher"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Admin"]]
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Admin"]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Admin"]]
+  Rendered searchs/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 462ms (Views: 424.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/searchs/new" for 127.0.0.1 at 2016-11-21 17:08:03 +0100
+Processing by SearchsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" IS NULL[0m
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" IS NULL[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" IS NULL[0m
+  Rendered searchs/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 425ms (Views: 386.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Admin&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:09:25 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Admin", "commit"=>"Chercher"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Admin"]]
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Admin"]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Admin"]]
+  Rendered searchs/new.html.erb within layouts/application (45.0ms)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for #<User::ActiveRecord_Relation:0xa8fc2e8>):
+    12: <% end %>
+    13: 
+    14: <%  @user.each do |a| %>
+    15: <%=    link_to @user.username, user_path(a) %>
+    16: <% end %>
+  
+app/views/searchs/new.html.erb:15:in `block in _app_views_searchs_new_html_erb___175337700_88537428'
+app/views/searchs/new.html.erb:14:in `_app_views_searchs_new_html_erb___175337700_88537428'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (28.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2743.2ms)
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Admin&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:10:05 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Admin", "commit"=>"Chercher"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Admin"]]
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Admin"]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Admin"]]
+  Rendered searchs/new.html.erb within layouts/application (47.0ms)
+Completed 500 Internal Server Error in 191ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    12: <% end %>
+    13: 
+    14: <%  @user.each do |a| %>
+    15: <%=    link_to @user[:username], user_path(a) %>
+    16: <% end %>
+  
+app/views/searchs/new.html.erb:15:in `block in _app_views_searchs_new_html_erb___175337700_78272604'
+app/views/searchs/new.html.erb:14:in `_app_views_searchs_new_html_erb___175337700_78272604'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (28.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2745.2ms)
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Admin&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:10:44 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Admin", "commit"=>"Chercher"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Admin"]]
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Admin"]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Admin"]]
+  Rendered searchs/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 469ms (Views: 430.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2016-11-21 17:11:11 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 418ms (Views: 378.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2016-11-21 17:12:36 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 452ms (Views: 412.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Admin&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:12:46 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Admin", "commit"=>"Chercher"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Admin"]]
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Admin"]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Admin"]]
+  Rendered searchs/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 435ms (Views: 391.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2016-11-21 17:12:52 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 406ms (Views: 371.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Bataclan&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:13:02 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Bataclan", "commit"=>"Chercher"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Bataclan"]]
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Bataclan"]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Bataclan"]]
+  Rendered searchs/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 472ms (Views: 432.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/concerts/1" for 127.0.0.1 at 2016-11-21 17:13:06 +0100
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts/show.html.erb within layouts/application
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  Rendered concerts/show.html.erb within layouts/application (48.0ms)
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `artiste_id' for nil:NilClass):
+    13: 	<strong> Artiste : </strong>
+    14: <%
+    15: 	@artistes.each do |a|
+    16: 		if a.id == @seance.artiste_id %>
+    17: <%= 		a.nom %>
+    18: <%= 		link_to "Edit", edit_artiste_path(a) %>
+    19: <%= 		link_to "Destroy", artiste_path(a),
+  
+app/views/concerts/show.html.erb:16:in `block in _app_views_concerts_show_html_erb___678448098_87401148'
+app/views/concerts/show.html.erb:15:in `_app_views_concerts_show_html_erb___678448098_87401148'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (32.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (3201.2ms)
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Bataclan&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:14:05 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Bataclan", "commit"=>"Chercher"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Bataclan"]]
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Bataclan"]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Bataclan"]]
+  Rendered searchs/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 447ms (Views: 407.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Barry&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:14:19 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Barry", "commit"=>"Chercher"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Barry"]]
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Barry"]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Barry"]]
+  Rendered searchs/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 407ms (Views: 367.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/searchs/new?utf8=%E2%9C%93&q=Barry+white&commit=Chercher" for 127.0.0.1 at 2016-11-21 17:14:27 +0100
+Processing by SearchsController#new as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Barry white", "commit"=>"Chercher"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering searchs/new.html.erb within layouts/application
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes" WHERE "artistes"."nom" = ?[0m  [["nom", "Barry white"]]
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."name" = ?[0m  [["name", "Barry white"]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ?[0m  [["username", "Barry white"]]
+  Rendered searchs/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 452ms (Views: 410.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artistes/2" for 127.0.0.1 at 2016-11-21 17:14:32 +0100
+Processing by ArtistesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT  "artistes".* FROM "artistes" WHERE "artistes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering artistes/show.html.erb within layouts/application
+  Rendered artistes/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 404ms (Views: 366.0ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to Userid (20161121160909)
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "reservations" ADD "user_id" integer[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservations_on_place_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservations_on_place_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservations_on_compte_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservations_on_compte_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE  INDEX "index_reservations_on_user_id" ON "reservations" ("user_id")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161121160909"]]
+  [1m[35m (131.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_commentaires_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_commentaires_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_commentaires_on_compte_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_commentaires_on_compte_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_commentaires_on_concert_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_commentaires_on_concert_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comptes_on_utilisateur_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comptes_on_utilisateur_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_concerts_on_genre_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_concerts_on_genre_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_places_on_seance_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_places_on_seance_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_places_on_typesplace_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_places_on_typesplace_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_places_on_concert_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_places_on_concert_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservations_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservations_on_place_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservations_on_place_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reservations_on_compte_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reservations_on_compte_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_seances_on_artiste_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_seances_on_artiste_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_seances_on_concert_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_seances_on_concert_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2016-11-21 17:33:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 1438ms (Views: 1286.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/concerts" for 127.0.0.1 at 2016-11-21 17:33:29 +0100
+Processing by ConcertsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mReservation Load (0.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered concerts/index.html.erb within layouts/application (136.0ms)
+Completed 200 OK in 722ms (Views: 578.3ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/concerts/1" for 127.0.0.1 at 2016-11-21 17:33:45 +0100
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  Rendered concerts/show.html.erb within layouts/application (84.0ms)
+Completed 200 OK in 569ms (Views: 521.7ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2016-11-21 17:34:02 +0100
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V5kPHFtb+zzNyLc9uAFwVDu2XMsJCFLDC7MSJ75aLOWZnQsMoEdm/JxeijIMZS3peWkh59+L/mMPn8aV2Ei23w==", "reservation"=>{"nombre_reservations"=>"1", "place_id"=>"10", "user_id"=>"4"}, "commit"=>"Reserver"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "reservations" ("place_id", "nombre_reservations", "user_id") VALUES (?, ?, ?)[0m  [["place_id", 10], ["nombre_reservations", 1], ["user_id", 4]]
+  [1m[35m (145.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "places" SET "places" = ? WHERE "places"."id" = ?[0m  [["places", 29], ["id", 10]]
+  [1m[35m (228.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/concerts
+Completed 302 Found in 428ms (ActiveRecord: 379.0ms)
+
+
+Started GET "/concerts" for 127.0.0.1 at 2016-11-21 17:34:02 +0100
+Processing by ConcertsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered concerts/index.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 500ms (Views: 455.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/concerts/1" for 127.0.0.1 at 2016-11-21 17:34:38 +0100
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  Rendered concerts/show.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 438ms (Views: 396.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:36:58 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  [1m[36mCommentaire Load (0.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (42.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (116.0ms)
+Completed 200 OK in 553ms (Views: 485.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:39:39 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCommentaire Load (1.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (7.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (194.0ms)
+Completed 200 OK in 754ms (Views: 576.3ms | ActiveRecord: 26.0ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2016-11-21 17:39:50 +0100
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IEYWLEMvnYtBlFTVfOIJOghxzvG/PLaJPnQLRBJ24sdmHT8dORViA9rIQMlkE3Q5rDT6dbKoUk0Zuja38/dX0g=="}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 9ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-11-21 17:39:50 +0100
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-21 17:39:50 +0100
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (3.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 441ms (Views: 408.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-21 17:39:56 +0100
+Processing by PagesController#home as HTML
+Redirected to http://localhost:3000/concerts_utilisateur/index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts_utilisateur/index" for 127.0.0.1 at 2016-11-21 17:39:56 +0100
+Processing by ConcertsUtilisateurController#index as HTML
+  Rendering concerts_utilisateur/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered concerts_utilisateur/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 401ms (Views: 370.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:40:00 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (75.0ms)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 6.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    60: Nombre de places :
+    61: <%= 	r.text_field :nombre_reservations %><br/>
+    62: <%= 	r.hidden_field(:place_id, :value => place.id) %>
+    63: <%= 	r.hidden_field(:user_id, :value => current_user.id) %>
+    64: <%= 	r.submit "Reserver" %>
+    65: 
+    66: <%					end
+  
+app/views/concerts_utilisateur/show.html.erb:63:in `block (4 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_80808432'
+app/views/concerts_utilisateur/show.html.erb:59:in `block (3 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_80808432'
+app/views/concerts_utilisateur/show.html.erb:51:in `block (2 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_80808432'
+app/views/concerts_utilisateur/show.html.erb:50:in `block in _app_views_concerts_utilisateur_show_html_erb___712671853_80808432'
+app/views/concerts_utilisateur/show.html.erb:42:in `_app_views_concerts_utilisateur_show_html_erb___712671853_80808432'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (30.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2792.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:41:56 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (2.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (65.0ms)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 6.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    60: Nombre de places :
+    61: <%= 	r.text_field :nombre_reservations %><br/>
+    62: <%= 	r.hidden_field(:place_id, :value => place.id) %>
+    63: <%= 	r.hidden_field(:user_id, :value => current_user.id) %>
+    64: <%= 	r.submit "Reserver" %>
+    65: 
+    66: <%					end
+  
+app/views/concerts_utilisateur/show.html.erb:63:in `block (4 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_82809540'
+app/views/concerts_utilisateur/show.html.erb:59:in `block (3 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_82809540'
+app/views/concerts_utilisateur/show.html.erb:51:in `block (2 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_82809540'
+app/views/concerts_utilisateur/show.html.erb:50:in `block in _app_views_concerts_utilisateur_show_html_erb___712671853_82809540'
+app/views/concerts_utilisateur/show.html.erb:42:in `_app_views_concerts_utilisateur_show_html_erb___712671853_82809540'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (30.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2796.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:43:45 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (3.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (67.0ms)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 7.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    60: Nombre de places :
+    61: <%= 	r.text_field :nombre_reservations %><br/>
+    62: <%= 	r.hidden_field(:place_id, :value => place.id) %>
+    63: <%= 	r.hidden_field(:user_id, :value => current_user.id) %>
+    64: <%= 	r.submit "Reserver" %>
+    65: 
+    66: <%					end
+  
+app/views/concerts_utilisateur/show.html.erb:63:in `block (4 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_84204084'
+app/views/concerts_utilisateur/show.html.erb:59:in `block (3 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_84204084'
+app/views/concerts_utilisateur/show.html.erb:51:in `block (2 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_84204084'
+app/views/concerts_utilisateur/show.html.erb:50:in `block in _app_views_concerts_utilisateur_show_html_erb___712671853_84204084'
+app/views/concerts_utilisateur/show.html.erb:42:in `_app_views_concerts_utilisateur_show_html_erb___712671853_84204084'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (30.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2792.2ms)
+Started GET "/" for 127.0.0.1 at 2016-11-21 17:45:02 +0100
+Processing by PagesController#home as HTML
+Redirected to http://localhost:3000/concerts_utilisateur/index
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts_utilisateur/index" for 127.0.0.1 at 2016-11-21 17:45:02 +0100
+Processing by ConcertsUtilisateurController#index as HTML
+  Rendering concerts_utilisateur/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered concerts_utilisateur/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 412ms (Views: 380.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:45:06 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (61.0ms)
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    60: Nombre de places :
+    61: <%= 	r.text_field :nombre_reservations %><br/>
+    62: <%= 	r.hidden_field(:place_id, :value => place.id) %>
+    63: <%= 	r.hidden_field(:user_id, :value => current_user.id) %>
+    64: <%= 	r.submit "Reserver" %>
+    65: 
+    66: <%					end
+  
+app/views/concerts_utilisateur/show.html.erb:63:in `block (4 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_46180812'
+app/views/concerts_utilisateur/show.html.erb:59:in `block (3 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_46180812'
+app/views/concerts_utilisateur/show.html.erb:51:in `block (2 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_46180812'
+app/views/concerts_utilisateur/show.html.erb:50:in `block in _app_views_concerts_utilisateur_show_html_erb___712671853_46180812'
+app/views/concerts_utilisateur/show.html.erb:42:in `_app_views_concerts_utilisateur_show_html_erb___712671853_46180812'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (32.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2846.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:46:35 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (66.0ms)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 7.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    60: Nombre de places :
+    61: <%= 	r.text_field :nombre_reservations %><br/>
+    62: <%= 	r.hidden_field(:place_id, :value => place.id) %>
+    63: <%= 	r.hidden_field(:user_id, :value => current_user.id) %>
+    64: <%= 	r.submit "Reserver" %>
+    65: 
+    66: <%					end
+  
+app/views/concerts_utilisateur/show.html.erb:63:in `block (4 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_76264284'
+app/views/concerts_utilisateur/show.html.erb:59:in `block (3 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_76264284'
+app/views/concerts_utilisateur/show.html.erb:51:in `block (2 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_76264284'
+app/views/concerts_utilisateur/show.html.erb:50:in `block in _app_views_concerts_utilisateur_show_html_erb___712671853_76264284'
+app/views/concerts_utilisateur/show.html.erb:42:in `_app_views_concerts_utilisateur_show_html_erb___712671853_76264284'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (30.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2786.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:47:06 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (64.0ms)
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    60: Nombre de places :
+    61: <%= 	r.text_field :nombre_reservations %><br/>
+    62: <%= 	r.hidden_field(:place_id, :value => place.id) %>
+    63: <%= 	r.hidden_field(:user_id, :value => current_user.id) %>
+    64: <%= 	r.submit "Reserver" %>
+    65: 
+    66: <%					end
+  
+app/views/concerts_utilisateur/show.html.erb:63:in `block (4 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_77930208'
+app/views/concerts_utilisateur/show.html.erb:59:in `block (3 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_77930208'
+app/views/concerts_utilisateur/show.html.erb:51:in `block (2 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_77930208'
+app/views/concerts_utilisateur/show.html.erb:50:in `block in _app_views_concerts_utilisateur_show_html_erb___712671853_77930208'
+app/views/concerts_utilisateur/show.html.erb:42:in `_app_views_concerts_utilisateur_show_html_erb___712671853_77930208'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2784.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:47:28 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (2.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (69.0ms)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    60: Nombre de places :
+    61: <%= 	r.text_field :nombre_reservations %><br/>
+    62: <%= 	r.hidden_field(:place_id, :value => place.id) %>
+    63: <%= 	r.hidden_field(:user_id, :value => current_user.id) %>
+    64: <%= 	r.submit "Reserver" %>
+    65: 
+    66: <%					end
+  
+app/views/concerts_utilisateur/show.html.erb:63:in `block (4 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_79598292'
+app/views/concerts_utilisateur/show.html.erb:59:in `block (3 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_79598292'
+app/views/concerts_utilisateur/show.html.erb:51:in `block (2 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_79598292'
+app/views/concerts_utilisateur/show.html.erb:50:in `block in _app_views_concerts_utilisateur_show_html_erb___712671853_79598292'
+app/views/concerts_utilisateur/show.html.erb:42:in `_app_views_concerts_utilisateur_show_html_erb___712671853_79598292'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (30.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2688.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:48:41 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (64.0ms)
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    60: Nombre de places :
+    61: <%= 	r.text_field :nombre_reservations %><br/>
+    62: <%= 	r.hidden_field(:place_id, :value => place.id) %>
+    63: <%= 	r.hidden_field(:user_id, :value => current_user.id) %>
+    64: <%= 	r.submit "Reserver" %>
+    65: 
+    66: <%					end
+  
+app/views/concerts_utilisateur/show.html.erb:63:in `block (4 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_81086892'
+app/views/concerts_utilisateur/show.html.erb:59:in `block (3 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_81086892'
+app/views/concerts_utilisateur/show.html.erb:51:in `block (2 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_81086892'
+app/views/concerts_utilisateur/show.html.erb:50:in `block in _app_views_concerts_utilisateur_show_html_erb___712671853_81086892'
+app/views/concerts_utilisateur/show.html.erb:42:in `_app_views_concerts_utilisateur_show_html_erb___712671853_81086892'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2779.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:49:14 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (63.0ms)
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    60: Nombre de places :
+    61: <%= 	r.text_field :nombre_reservations %><br/>
+    62: <%= 	r.hidden_field(:place_id, :value => place.id) %>
+    63: <%= 	r.hidden_field(:user_id, :value => current_user.id) %>
+    64: <%= 	r.submit "Reserver" %>
+    65: 
+    66: <%					end
+  
+app/views/concerts_utilisateur/show.html.erb:63:in `block (4 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_82629804'
+app/views/concerts_utilisateur/show.html.erb:59:in `block (3 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_82629804'
+app/views/concerts_utilisateur/show.html.erb:51:in `block (2 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_82629804'
+app/views/concerts_utilisateur/show.html.erb:50:in `block in _app_views_concerts_utilisateur_show_html_erb___712671853_82629804'
+app/views/concerts_utilisateur/show.html.erb:42:in `_app_views_concerts_utilisateur_show_html_erb___712671853_82629804'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2813.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:50:33 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mCommentaire Load (0.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (37.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (104.0ms)
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    3:     <%= f.label :commentaire %>
+    4:     <%= f.text_field :texte %>
+    5: 
+    6:     <%= f.hidden_field(:user_id, :value => current_user.id) %>
+    7:     <%= f.hidden_field(:titre, :value => @concert.name) %>
+    8:     <%= f.hidden_field(:concert_id, :value => @concert.id) %>
+    9: 
+  
+app/views/concerts_utilisateur/_formCommentaire.html.erb:6:in `block in _app_views_concerts_utilisateur__form_ommentaire_html_erb___646654311_82631028'
+app/views/concerts_utilisateur/_formCommentaire.html.erb:1:in `_app_views_concerts_utilisateur__form_ommentaire_html_erb___646654311_82631028'
+app/views/concerts_utilisateur/show.html.erb:79:in `_app_views_concerts_utilisateur_show_html_erb___712671853_82791612'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (54.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (21.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2767.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:51:23 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mCommentaire Load (0.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (6.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 555ms (Views: 517.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:52:33 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mCommentaire Load (1.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (5.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 488ms (Views: 448.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:52:44 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mCommentaire Load (1.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (5.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 488ms (Views: 445.4ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/commentaires" for 127.0.0.1 at 2016-11-21 17:53:10 +0100
+Processing by CommentairesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k9uAEI1nRhVDKIdwRKgYBrk25499+wa4hVb1krXPQrU4g7g7nZpuvXDu4srySM9b8vmmLV6bQxqKvoxudgjTig==", "commentaire"=>{"texte"=>"", "titre"=>"Bataclan", "concert_id"=>"1"}, "commit"=>"Créer"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-21 17:53:10 +0100
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (4.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 448ms (Views: 413.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/commentaires" for 127.0.0.1 at 2016-11-21 17:53:20 +0100
+Processing by CommentairesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k9uAEI1nRhVDKIdwRKgYBrk25499+wa4hVb1krXPQrU4g7g7nZpuvXDu4srySM9b8vmmLV6bQxqKvoxudgjTig==", "commentaire"=>{"texte"=>"azerty", "titre"=>"Bataclan", "concert_id"=>"1"}, "commit"=>"Créer"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-21 17:53:20 +0100
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (3.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 439ms (Views: 406.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:54:30 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (C:/a/ConcertizV4/app/views/concerts_utilisateur/show.html.erb:52: syntax error, unexpected '<'
+						<%= form_for :reservation, url: reservations_path do |r| 
+						 ^
+C:/a/ConcertizV4/app/views/concerts_utilisateur/show.html.erb:72: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/a/ConcertizV4/app/views/concerts_utilisateur/show.html.erb:74: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/concerts_utilisateur/show.html.erb:52: syntax error, unexpected '<'
+app/views/concerts_utilisateur/show.html.erb:72: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/concerts_utilisateur/show.html.erb:74: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (30.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2841.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:54:48 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/a/ConcertizV4/app/views/concerts_utilisateur/show.html.erb:52: syntax error, unexpected '<'
+						<%= form_for :reservation, url: reservations_path do |r| 
+						 ^
+C:/a/ConcertizV4/app/views/concerts_utilisateur/show.html.erb:73: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/concerts_utilisateur/show.html.erb:52: syntax error, unexpected '<'
+app/views/concerts_utilisateur/show.html.erb:73: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (30.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2737.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:55:10 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mCommentaire Load (0.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (5.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 473ms (Views: 434.3ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2016-11-21 17:55:20 +0100
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c+9kNiU4R6IVlj34B8rxI/yd3ATwoMSSUo9wVLcKW9PYt1wdNcVvCiZQWEKxKiZ+t1KdptPAgTBdZwmodM3K7A==", "commit"=>"Reserver"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-21 17:55:20 +0100
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (3.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 455ms (Views: 421.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2016-11-21 17:55:25 +0100
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c+9kNiU4R6IVlj34B8rxI/yd3ATwoMSSUo9wVLcKW9PYt1wdNcVvCiZQWEKxKiZ+t1KdptPAgTBdZwmodM3K7A==", "commit"=>"Reserver"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-21 17:55:25 +0100
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (3.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 448ms (Views: 415.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2016-11-21 17:56:31 +0100
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (3.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 429ms (Views: 396.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2016-11-21 17:56:43 +0100
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E1/4SzjNjuQ6lO63v0tfVhV7jXuf5NURj6tn0iR+xgBTEPJKDDllrmm4r5wq0DhA8FYtblj9n752LmRRlFoIlw==", "email"=>"azerty@azerty.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'azerty@azerty.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 512ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-11-21 17:56:44 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/concerts_utilisateur/index
+Filter chain halted as :is_admin rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts_utilisateur/index" for 127.0.0.1 at 2016-11-21 17:56:44 +0100
+Processing by ConcertsUtilisateurController#index as HTML
+  Rendering concerts_utilisateur/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered concerts_utilisateur/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 432ms (Views: 398.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:56:47 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommentaire Load (1.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (6.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 466ms (Views: 423.6ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2016-11-21 17:56:56 +0100
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G4V2ZOukKI2A1na4M0rQZdrkZ36hm7QdmUORO9Iv3gw1JQcqjmzRA+OtUliRYMCjGxi9VmmT0RcwpnSBpUZgLQ==", "reservation"=>{"nombre_reservations"=>"29", "place_id"=>"10", "user_id"=>"2"}, "commit"=>"Reserver"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/concerts_utilisateur/index
+Filter chain halted as :is_admin rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/concerts_utilisateur/index" for 127.0.0.1 at 2016-11-21 17:56:57 +0100
+Processing by ConcertsUtilisateurController#index as HTML
+  Rendering concerts_utilisateur/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered concerts_utilisateur/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 420ms (Views: 386.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:57:00 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommentaire Load (0.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (6.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 467ms (Views: 427.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:59:08 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommentaire Load (1.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (6.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (175.0ms)
+Completed 200 OK in 706ms (Views: 545.1ms | ActiveRecord: 20.0ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2016-11-21 17:59:15 +0100
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NXVlPMUyVtlwt8TgzZ5AFrmbRnd9GB3asBPWmvRXE+CeLV0X1c9+cUNxoVp7fpdL8lQH1V54WHi/+69mN5CC3w==", "reservation"=>{"nombre_reservations"=>"20", "place_id"=>"10", "user_id"=>"2"}, "commit"=>"Reserver"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "reservations" ("place_id", "nombre_reservations", "user_id") VALUES (?, ?, ?)[0m  [["place_id", 10], ["nombre_reservations", 20], ["user_id", 2]]
+  [1m[35m (143.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "places" SET "places" = ? WHERE "places"."id" = ?[0m  [["places", 9], ["id", 10]]
+  [1m[35m (142.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/concerts
+Completed 302 Found in 369ms (ActiveRecord: 296.0ms)
+
+
+Started GET "/concerts" for 127.0.0.1 at 2016-11-21 17:59:15 +0100
+Processing by ConcertsController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/concerts_utilisateur/index
+Filter chain halted as :is_admin rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/concerts_utilisateur/index" for 127.0.0.1 at 2016-11-21 17:59:15 +0100
+Processing by ConcertsUtilisateurController#index as HTML
+  Rendering concerts_utilisateur/index.html.erb within layouts/application
+  [1m[36mConcert Load (2.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered concerts_utilisateur/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 466ms (Views: 429.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:59:19 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommentaire Load (0.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (5.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 469ms (Views: 427.8ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2016-11-21 17:59:29 +0100
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9qMTS+6dWnOR4CUl1q2X/zYmjc1qwMPBbeaXE02jo3zYA2IFi1Wj/fKbAcV0h4c599pX5aLIpsvEA3KpOsodXQ==", "reservation"=>{"nombre_reservations"=>"10", "place_id"=>"10", "user_id"=>"2"}, "commit"=>"Reserver"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "reservations" ("place_id", "nombre_reservations", "user_id") VALUES (?, ?, ?)[0m  [["place_id", 10], ["nombre_reservations", 10], ["user_id", 2]]
+  [1m[35m (197.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+No template found for ReservationsController#create, rendering head :no_content
+Completed 204 No Content in 1671ms (ActiveRecord: 202.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 17:59:52 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommentaire Load (1.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (5.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 504ms (Views: 460.8ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2016-11-21 17:59:58 +0100
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7d9v7Jb6PMfdt38DsnfiYlE9xmsnArafQlIwQSN4OclGh1fHhgcUb+5xGrkElzU/GvKHyQRi8z1Nukm94L+o9g==", "reservation"=>{"nombre_reservations"=>"9", "place_id"=>"10", "user_id"=>"2"}, "commit"=>"Reserver"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "reservations" ("place_id", "nombre_reservations", "user_id") VALUES (?, ?, ?)[0m  [["place_id", 10], ["nombre_reservations", 9], ["user_id", 2]]
+  [1m[35m (163.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "places" SET "places" = ? WHERE "places"."id" = ?[0m  [["places", 0], ["id", 10]]
+  [1m[35m (92.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/concerts
+Completed 302 Found in 315ms (ActiveRecord: 261.0ms)
+
+
+Started GET "/concerts" for 127.0.0.1 at 2016-11-21 17:59:59 +0100
+Processing by ConcertsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/concerts_utilisateur/index
+Filter chain halted as :is_admin rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/concerts_utilisateur/index" for 127.0.0.1 at 2016-11-21 17:59:59 +0100
+Processing by ConcertsUtilisateurController#index as HTML
+  Rendering concerts_utilisateur/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered concerts_utilisateur/index.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 436ms (Views: 402.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 18:00:02 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (1.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommentaire Load (1.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (5.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 487ms (Views: 441.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 18:01:24 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommentaire Load (0.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (5.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 519ms (Views: 474.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 18:02:12 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (0.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (1.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts"[0m
+  [1m[36mCommentaire Load (0.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (263.0ms)
+Completed 500 Internal Server Error in 393ms (ActiveRecord: 5.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `elseif' for #<#<Class:0xa3cc680>:0x39c8550>):
+    48: 
+    49: 	<%					end
+    50: 					
+    51: 					elseif  place.places > 0  %>
+    52: 						<%= form_for :reservation, url: reservations_path do |r| %>
+    53: 
+    54: 						<%= 	r.submit "Reserver" %>
+  
+app/views/concerts_utilisateur/show.html.erb:51:in `block (3 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_30386364'
+app/views/concerts_utilisateur/show.html.erb:37:in `block (2 levels) in _app_views_concerts_utilisateur_show_html_erb___712671853_30386364'
+app/views/concerts_utilisateur/show.html.erb:36:in `block in _app_views_concerts_utilisateur_show_html_erb___712671853_30386364'
+app/views/concerts_utilisateur/show.html.erb:32:in `_app_views_concerts_utilisateur_show_html_erb___712671853_30386364'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (2779.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 18:02:33 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (C:/a/ConcertizV4/app/views/concerts_utilisateur/show.html.erb:73: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/a/ConcertizV4/app/views/concerts_utilisateur/show.html.erb:75: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/concerts_utilisateur/show.html.erb:73: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/concerts_utilisateur/show.html.erb:75: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (29.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2744.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 18:03:30 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/a/ConcertizV4/app/views/concerts_utilisateur/show.html.erb:51: syntax error, unexpected keyword_else
+					if else   place.places > 0  
+					       ^):
+  
+app/views/concerts_utilisateur/show.html.erb:51: syntax error, unexpected keyword_else
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (29.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2817.2ms)
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 18:03:56 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (0.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (0.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (0.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommentaire Load (0.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (5.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 495ms (Views: 455.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/concerts_utilisateur/1" for 127.0.0.1 at 2016-11-21 18:07:16 +0100
+Processing by ConcertsUtilisateurController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT  "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering concerts_utilisateur/show.html.erb within layouts/application
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT  "seances".* FROM "seances" WHERE "seances"."concert_id" = ? LIMIT ?[0m  [["concert_id", 1], ["LIMIT", 1]]
+  [1m[36mArtiste Load (1.0ms)[0m  [1m[34mSELECT "artistes".* FROM "artistes"[0m
+  [1m[36mGenre Load (0.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  [1m[36mSeance Load (1.0ms)[0m  [1m[34mSELECT "seances".* FROM "seances"[0m
+  [1m[36mTypesplace Load (0.0ms)[0m  [1m[34mSELECT "typesplaces".* FROM "typesplaces"[0m
+  [1m[36mPlace Load (1.0ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommentaire Load (1.0ms)[0m  [1m[34mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."concert_id" = ?[0m  [["concert_id", 1]]
+  Rendered concerts_utilisateur/_formCommentaire.html.erb (5.0ms)
+  Rendered concerts_utilisateur/show.html.erb within layouts/application (76.0ms)
+Completed 200 OK in 518ms (Views: 474.5ms | ActiveRecord: 7.0ms)
+
+

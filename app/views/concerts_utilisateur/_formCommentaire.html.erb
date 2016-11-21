@@ -3,7 +3,9 @@
     <%= f.label :commentaire %>
     <%= f.text_field :texte %>
 
+    <% if current_user %>
     <%= f.hidden_field(:user_id, :value => current_user.id) %>
+    <% end %>
     <%= f.hidden_field(:titre, :value => @concert.name) %>
     <%= f.hidden_field(:concert_id, :value => @concert.id) %>
 

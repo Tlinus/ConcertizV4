@@ -1,0 +1,13 @@
+
+
+<%  @artiste.each do |a| %>
+<%=    link_to a.nom, artiste_path(a) %>
+<% end %>
+
+<%  @concert.each do |a| %>
+<%=    link_to a.name, concert_path(a) %>
+<% end %>
+
+<%  @user.each do |a| %>
+<%=    link_to a.username, user_path(a) %>
+<% end %>

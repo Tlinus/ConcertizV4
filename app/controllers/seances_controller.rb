@@ -14,7 +14,7 @@ class SeancesController < ApplicationController
 	@seance = Seance.new(seance_params)
 	@seance.save
 	if @seance.save
-		redirect_to "http://localhost:3000/concerts"
+		redirect_to seance_path(@seance)
 	else
 		redirect_to :back
 	end

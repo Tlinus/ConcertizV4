@@ -18,6 +18,14 @@
 	      <%= link_to "Se connecter", :login %>
 	    <% end %>
 	  </div>
+      <div>
+            <%= form_tag( new_search_path , method: "get") do %>
+              <%= label_tag(:q, "Search for:") %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("Chercher") %>
+            <% end %>
+           
+      </div>
 	  <div>
 	    <p id="notice"><%= flash[:notice] %></p>
 	    <p id="alert"><%= flash[:alert] %></p>

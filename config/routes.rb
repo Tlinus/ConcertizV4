@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'concerts_utilisateur/index'
 
   get 'concerts_utilisateur/show'
@@ -66,7 +67,7 @@ Rails.application.routes.draw do
   resources :users
   resources :user_sessions
   resources :commentaires
-  
+  resources :searchs
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

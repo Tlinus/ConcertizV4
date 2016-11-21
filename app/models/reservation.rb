@@ -1,6 +1,6 @@
 class Reservation < ActiveRecord::Base
 	belongs_to :place
-	belongs_to :compte
+	belongs_to :user
 	
 	def initialize(attributes = {})
 		super

@@ -12,6 +12,7 @@
 <p>
 	<strong> Artiste : </strong>
 <%
+@seance = Seance.find_by(concert_id: @concert.id)
 	@artistes.each do |a|
 		if a.id == @seance.artiste_id %>
 <%= 		a.nom %>
@@ -34,7 +35,7 @@
 			method: :delete,
 			data: {confirm: "Etes vous sûr ?"} %> <br/>
 	<% end %>
-	<% end %>
+<% end %>
 </p>
 <p>
 <strong> Seances : </strong> <br/>
@@ -49,35 +50,23 @@
 			@typesplaces.each do |typesplace|
 				@places.each do |place|
 					if place.typesplace_id == typesplace.id && seance.id == place.seance_id %>
-<br/><%= 					"<br/>Nombre de places en #{typesplace.nom} : #{place.places} / #{place.nombre_max_places} " %>					
-			<br/>		
-<% 					end
+<br/><%= 					"Nombre de places en #{typesplace.nom}(#{place.prix} €) : #{place.places} / #{place.nombre_max_places} " %>	
+<%= 						link_to "Edit", edit_place_path(place) %>
+<%= 						link_to "Destroy", place_path(place),
+							method: :delete,
+							data: {confirm: "Etes vous sûr ?"} %>	
+							
+<%= form_for :reservation, url: reservations_path do |r| %>
+Nombre de places :
+<%= 	r.text_field :nombre_reservations %><br/>
+<%= 	r.hidden_field(:place_id, :value => place.id) %>
+<%= 	r.hidden_field(:user_id, :value => current_user.id) %>
+<%= 	r.submit "Reserver" %>
+
+<%					end
 				end
 			end
 		end
-	end 
+	end
+end
 %>
-
-</p>
-<strong> Reserver une ou plusieurs place(s) : </strong> <br/>
-<%= form_for :reservation, url: reservations_path do |r| %>
-
-	Nombre de places :
-	<%= r.text_field :nombre_reservations %><br/>
-	Type de places :
-	<%= r.select(:place_id) do %>
-	<% 		@typesplaces.each do |t|	
-				@places.each do |p|		
-					@concerts.each do |c|
-						if @concert.id == c.id && c.id == p.concert_id && p.typesplace_id == t.id %>	
-		<%= 				content_tag(:option, t.nom, value: p.id) %>
-					<%	end %>
-				<% 	end %>
-			<% 	end %>
-		<% 	end
-		end%>
-		<br/>
-	
-
-	<%= r.submit "Créer" %>
-<% end %>

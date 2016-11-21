@@ -11,14 +11,14 @@ class ConcertsUtilisateurController < ApplicationController
 
   def show
 	  	@concert = Concert.find(params[:id])
-		@places = Place.all
-		@concerts = Concert.all
-		@genres = Genre.all
-		@typesplaces = Typesplace.all
-		@seances = Seance.all
-		@artistes = Artiste.all
-        @commentaires = Commentaire.where(concert_id: params[:id])
-        @commentaire = Commentaire.new
+  		@places = Place.all
+  		@concerts = Concert.all
+  		@genres = Genre.all
+  		@typesplaces = Typesplace.all
+  		@seances = Seance.all
+  		@artistes = Artiste.all
+      @commentaires = Commentaire.where(concert_id: params[:id])
+      @commentaire = Commentaire.new
 
   end
 

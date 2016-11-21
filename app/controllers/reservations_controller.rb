@@ -1,4 +1,5 @@
 class ReservationsController < ApplicationController
+    skip_before_action :is_admin, only: [:new, :create, :show]
   def index
 	@places = Place.all
 	@typeplaces = Typesplace.all
@@ -56,7 +57,7 @@ class ReservationsController < ApplicationController
   
   	private
 	def reservation_params
-		params.require(:reservation).permit(:nombre_reservations, :place_id )
+		params.require(:reservation).permit(:nombre_reservations, :place_id, :user_id )
 	end
 
 end

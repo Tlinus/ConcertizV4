@@ -1,15 +1,28 @@
 <h1> edit </h1>
 
 <%= form_for :place, url: place_path(@place), method: :patch do |p| %>
-	
+
+	<p>
+		<%= p.label :typesplace_id %><br>
+		<%= p.text_field :typesplace_id %>
+	</p>
+
+	<p>
+		<%= p.label :seance_id %><br>
+		<%= p.text_field :seance_id %>
+	</p>
+
+	<p>
+		<%= p.label :concert_id %><br>
+		<%= p.text_field :concert_id %>
+	</p>
 	<p>
 		<%= p.label :nombreplaces %><br>
 		<%= p.text_field :places %>
+	</p>		<p>
+		<%= p.label :nombremaxplaces %><br>
+		<%= p.text_field :nombre_max_places %>
 	</p>	
-	<p>
-		<%= p.label :seanceid %><br>
-		<%= p.text_field :seance_id %>
-	</p>
 	<p>
 		<%= p.label :prix %><br>
 		<%= p.text_field :prix %>
