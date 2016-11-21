@@ -11,10 +11,7 @@ class SeancesController < ApplicationController
   end
 
   def create
-	@seances = Seance.all
-	@concerts = Concert.all
-	@artistes = Artiste.all
-	@seance = Seance.new(place_params)
+	@seance = Seance.new(seance_params)
 	@seance.save
 	if @seance.save
 		redirect_to "http://localhost:3000/concerts"
@@ -30,7 +27,7 @@ class SeancesController < ApplicationController
 	def update
 		@seance = Seance.find(params[:id])
 		
-		if @seance.update(place_params)
+		if @seance.update(seance_params)
 			redirect_to @seance
 		else 
 			render 'edit'
@@ -52,8 +49,8 @@ class SeancesController < ApplicationController
 	end
   
   	private
-	def place_params
-		params.require(:seance).permit(:seances, :date, :concert_id, :artiste_id)
+	def seance_params
+		params.require(:seance).permit(:date, :concert_id, :artiste_id)
 	end
 
 end

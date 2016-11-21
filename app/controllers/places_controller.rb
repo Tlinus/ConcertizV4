@@ -52,7 +52,7 @@ class PlacesController < ApplicationController
   
   	private
 	def place_params
-		params.require(:place).permit(:places, :prix, :typesplace_id, :concert_id)
+		params.require(:place).permit(:places, :prix, :typesplace_id, :concert_id, :seance_id)
 	end
 
 end

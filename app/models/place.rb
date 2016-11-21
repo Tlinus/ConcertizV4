@@ -1,6 +1,7 @@
 class Place < ActiveRecord::Base
 	belongs_to :typesplace
 	belongs_to :concert
+	belongs_to :seance
 	has_many :reservations
 	
 	def initialize(attributes = {})

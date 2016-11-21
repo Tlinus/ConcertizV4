@@ -11,70 +11,53 @@
 </p>
 <p>
 	<strong> Artiste : </strong>
-	<%
-		@seances.each do |s|
-			@artistes.each do |a|
-				if s.concert_id == @concert.id && a.id == s.artiste_id %>
-			<%= 	a.nom %>
-			<%= link_to "Edit", edit_artiste_path(a) %>
-			<%= link_to "Destroy", artiste_path(a),
+<%
+	@artistes.each do |a|
+		if a.id == @seance.artiste_id %>
+<%= 		a.nom %>
+<%= 		link_to "Edit", edit_artiste_path(a) %>
+<%= 		link_to "Destroy", artiste_path(a),
 			method: :delete,
 			data: {confirm: "Etes vous sûr ?"} %>
-	<%			end
-			end
-		end
-	%>
+<%      end
+	end
+%>
+
 </p>
 <p>
 	<strong> Genre : </strong>
-	<% @genres.each do |genre| %>
-		<% 	if @concert.genre_id == genre.id %>
-			<%= genre.nom %>
-			<%= link_to "Edit", edit_genre_path(genre) %>
-			<%= link_to "Destroy", genre_path(genre),
-				method: :delete,
-				data: {confirm: "Etes vous sûr ?"} %> <br/>
-		<% end %>
+<% 	@genres.each do |genre| %>
+	<% 	if @concert.genre_id == genre.id %>
+		<%= genre.nom %>
+		<%= link_to "Edit", edit_genre_path(genre) %>
+		<%= link_to "Destroy", genre_path(genre),
+			method: :delete,
+			data: {confirm: "Etes vous sûr ?"} %> <br/>
+	<% end %>
 	<% end %>
 </p>
 <p>
 <strong> Seances : </strong> <br/>
-<% @seances.each do |seance| %>
-	<% 
-	if seance.concert_id == @concert.id
-	%>
-		<%= seance.date %>
-		<%= link_to "Edit", edit_seance_path(seance) %>
-		<%= link_to "Destroy", seance_path(seance),
+<%	@seances.each do |seance| %>
+<%		if seance.concert_id == @concert.id %>
+<%=			seance.date %>
+<%= 		link_to "Edit", edit_seance_path(seance) %>
+<%= 		link_to "Destroy", seance_path(seance),
 			method: :delete,
 			data: {confirm: "Etes vous sûr ?"} %>
-			
-<% 	end
-end %>
+<%
+			@typesplaces.each do |typesplace|
+				@places.each do |place|
+					if place.typesplace_id == typesplace.id && seance.id == place.seance_id %>
+<br/><%= 					"<br/>Nombre de places en #{typesplace.nom} : #{place.places} / #{place.nombre_max_places} " %>					
+			<br/>		
+<% 					end
+				end
+			end
+		end
+	end 
+%>
 
-
-
-</p>
-<p>
-<strong> Places disponnibles :</strong><br/>
-<% @places.each do |place| %>
-	<% 	if @concert.id == place.concert_id %>
-		<%= place.places %>
-		<% @typesplaces.each do |typeplace| %>
-			<% 	if place.typesplace_id == typeplace.id %>
-				<% @seances.each do |seance|
-					if seance.concert_id == @concert_id %>
-						<%= " / #{place.nombre_max_places} : #{typeplace.nom}" %> 
-						<%= link_to "Edit", edit_typesplace_path(typeplace) %>
-						<%= link_to "Destroy", typesplace_path(typeplace),
-							method: :delete,
-							data: {confirm: "Etes vous sûr ?"} %><br/>
-				<%	end %>
-			<% 	end %>
-		<% 	end %>
-	<% 	end %>
-<% 	end 
-end %>
 </p>
 <strong> Reserver une ou plusieurs place(s) : </strong> <br/>
 <%= form_for :reservation, url: reservations_path do |r| %>
