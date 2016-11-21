@@ -1,0 +1,11 @@
+<%= form_for(commentaire) do |f| %>
+
+    <%= f.label :commentaire %>
+    <%= f.text_field :texte %>
+
+    <%= f.hidden_field(:user_id, :value => current_user.id) %>
+    <%= f.hidden_field(:titre, :value => @concert.name) %>
+    <%= f.hidden_field(:concert_id, :value => @concert.id) %>
+
+    <%= f.submit "Créer" %>
+<% end %>
