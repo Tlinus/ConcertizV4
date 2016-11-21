@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161120131712) do
+ActiveRecord::Schema.define(version: 20161121113038) do
 
   create_table "artistes", force: :cascade do |t|
     t.string "nom"
@@ -49,7 +49,9 @@ ActiveRecord::Schema.define(version: 20161120131712) do
     t.integer "concert_id"
     t.integer "typesplace_id"
     t.integer "nombre_max_places"
+    t.integer "seance_id"
     t.index ["concert_id"], name: "index_places_on_concert_id"
+    t.index ["seance_id"], name: "index_places_on_seance_id"
     t.index ["typesplace_id"], name: "index_places_on_typesplace_id"
   end
 
