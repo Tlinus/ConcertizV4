@@ -1,47 +1,68 @@
-<%= form_for(user) do |f| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
 
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div id="corp">
+    <div id="entete">
+        <div id="title">
+            <h1>eConcert</h1>
+        </div>
+        <p>Nouveau compte utilisateur </p>
     </div>
-  <% end %>
+    
+    <div id="sousCorp">
+        <div id="contenuCorp2">
+                <%= form_for(user) do |f| %>
+                <% if user.errors.any? %>
+                
+                <div id="error_explanation">
+                    <h2>
+                        <%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:
+                    </h2>
+
+                    <ul>
+                        <% user.errors.full_messages.each do |message| %>
+                            <li><%= message %></li>
+                        <% end %>
+                    </ul>
+                </div>
+                <% end %>
+                
+                <div class="field">
+                    <%= f.label 'Nom d\'utilisateur' %><br />
+                    <%= f.text_field :username %>
+                </div>
+
+                <div class="field">
+                    <%= f.label :Nom %><br />
+                    <%= f.text_field :lastname %>
+                </div>
+
+                <div class="field">
+                    <%= f.label :Prenom %><br />
+                    <%= f.text_field :firstname %>
+                </div>
+                
+                <div class="field">
+                    <%= f.label :Email %><br/>
+                    <%= f.text_field :email %>
+                </div>
+
+                <div class="field">
+                    <%= f.label 'Mot de passe' %><br />
+                    <%= f.password_field :password %>
+                </div>
+                <div class="field">
+                    <%= f.label :Confirmation %><br />
+                    <%= f.password_field :password_confirmation %>
+                </div>
+
+               <button type="button" class="btn btn-success"><%= f.submit :Enregistrer,  :style => "margin-top : 5%; background-color: #5cb85c;border-style: none;"%></button>
+               
+                <% end %>
+        </div>
+    </div>
+</div>
 
 
-  <div class="field">
-    <%= f.label :Email %>
-    <%= f.text_field :email %>
-  </div>
 
-  <div class="field">
-     <%= f.label 'Nom d\'utilisateur' %><br />
-     <%= f.text_field :username %>
-  </div>
 
-  <div class="field">
-     <%= f.label :Nom %><br />
-     <%= f.text_field :lastname %>
-  </div>
-
-  <div class="field">
-     <%= f.label :Prenom %><br />
-     <%= f.text_field :firstname %>
-  </div>
-
-  <div class="field">
-     <%= f.label 'Mot de passe' %><br />
-     <%= f.password_field :password %>
-  </div>
-  <div class="field">
-     <%= f.label :Confirmation %><br />
-     <%= f.password_field :password_confirmation %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit :Enregistrer %>
-  </div>
-<% end %>
+        

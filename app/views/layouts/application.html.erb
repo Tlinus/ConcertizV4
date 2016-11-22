@@ -9,27 +9,35 @@
   </head>
 
   <body>
-  	<div id="nav">
-	    <% if current_user %>
-	      <%= link_to "Editer mon profile", edit_user_path(current_user.id) %>
-	      <%= link_to "Se déconnecter", :logout, method: :post %>
-	    <% else %>
-	      <%= link_to "S'inscrire", new_user_path %> |
-	      <%= link_to "Se connecter", :login %>
-	    <% end %>
-	  </div>
-      <div>
-            <%= form_tag( new_search_path , method: "get") do %>
-              <%= label_tag(:q, "Search for:") %>
-              <%= text_field_tag(:q) %>
-              <%= submit_tag("Chercher") %>
-            <% end %>
-           
+    <div class="container-fluid">
+      <div class = "row" >
+      	<div id="nav" class="col-xs-5">
+    	    <% if current_user %>
+    	      <%= link_to "Editer mon profile", edit_user_path(current_user.id) %>
+    	      <%= link_to "Se déconnecter", :logout, method: :post %>
+    	    <% else %>
+    	      <%= link_to "S'inscrire", new_user_path %> |
+    	      <%= link_to "Se connecter", :login %>
+    	    <% end %>
+    	  </div>
+        <div class="col-xs-7">
+              <%= form_tag( new_search_path , method: "get", :style => "float: right") do %>
+                <%= label_tag(:q, "Search for:", :style => "display: inline;") %>
+                <%= text_field_tag(:q, nil, style: "display: inline;") %>
+                <%= submit_tag("Chercher", :style => "display: inline;") %>
+              <% end %>
+             
+        </div>
       </div>
-	  <div>
-	    <p id="notice"><%= flash[:notice] %></p>
-	    <p id="alert"><%= flash[:alert] %></p>
-  	</div>
+      <div class="row">
+    	  <div class ="col-xs-12">
+    	    <p id="notice"><%= flash[:notice] %></p>
+    	    <p id="alert"><%= flash[:alert] %></p>
+      	</div>
+      </div>
+    </div>
+
     <%= yield %>
+  
   </body>
 </html>

@@ -1,4 +1,6 @@
 class ConcertsController < ApplicationController
+	
+    
 	def index
 		@concerts = Concert.all
 		@genres = Genre.all

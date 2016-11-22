@@ -1,15 +1,45 @@
-<h1> Concerts </h1>
-<ul>
-  <% @concerts.each do |concert| %>
-  	<h3><%= concert.name %></h3>
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
 
-  	<h5> 	<% @genres.each do |genre| %>
-				<% 	if concert.genre_id == genre.id %>
-					<%= genre.nom %> <br/>
-				<% end %>
-			<% end %>
-	</h5>
-		<%= link_to "Voir", concerts_utilisateur_path(concert) %> <br/> 
-  <% end %>
-</ul>
+<div id="corp">
+    <div id="entete">
+        <div id="title">
+            <h1>eConcert</h1>
+        </div>
+<!--            <b id="login">
+               <%#= link_to("Login", '/pages/login') %>   
+            </b> -->
+        <p>Bienvenu sur eConcert, ici geré vos reservation de concert avec simplicité</p>
+    </div>
 
+<div id="sousCorp">
+        <div class="container-fluid">    
+        <div id="contenuCorp">
+            <center>                
+                <div class="row">  
+                    <% @concerts.each do |concert| %>    
+                    <div class="col-md-6">
+                        <b style="float: left; margin-right: 10%; width : 40%;">
+                            <p style="margin-right: 10%;">
+                               
+                                <u><%= concert.name %></u> 
+                                   </br>
+                                    <% @genres.each do |genre| %>
+                                    <%  if concert.genre_id == genre.id %>
+                                        <%= genre.nom %> <br/>
+                                    <% end %>
+                                    <% end %> 
+                        
+                                    <%= link_to "Réserver", concerts_utilisateur_path(concert) %>
+                            </p>
+                        </b>
+                           
+                            <%= image_tag("olym.jpg", :style => "width : 30%; border-radius: 50%; float: left; margin-left: 5%;") %>
+                    </div>
+                        
+                    <% end %>      
+                </div>      
+            </center>
+            </div> 
+        </div>
+    </div>
+</div>

@@ -1,38 +1,57 @@
-<p id="notice"><%= notice %></p>
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
 
-<h1>Utilisateurs</h1>
+<div id="corp">
+    <div id="entete">
+        <div id="title">
+            <h1>eConcert</h1>
+        </div>
+        <p>Gestion des utilisateurs</p>
+    </div>
+    
+    <div id="sousCorp">
+        <div id="contenuCorp2">
+            <h1>Utilisateurs</h1>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Email :</th><br/>
+                      <th colspan="3"></th>
+                    </tr>
+                  </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+                  <tbody>
+                    <% @users.each do |user| %>
+                      <tr>
+                        <td><%= user.email %></td>
+                        <div>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-xs" style="background-color : green;">
+                                    <%= link_to 'Voir', user, :class => "tdEdite" %>
+                                </button>
+                            </td>
+                        </div>
+                        <td>
+                             <button type="button" class="btn btn-primary btn-xs">
+                                 <%= link_to 'Editer', edit_user_path(user), :class => "tdEdite" %>
+                             </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-xs" style="background-color : #B12B2A;">
+                                <%= link_to 'Supprimer', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "tdEdite" %>
+                            </button>
+                        </td>
+                        
+                      </tr>
+                      
+                    <% end %>
+                  </tbody>
+                </table>
+            <br/>
+           
+            
+        </div>
+    </div>
+</div>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.email %></td>
-        <td><%= link_to 'Voir', user %></td>
-        <td><%= link_to 'Editer', edit_user_path(user) %></td>
-        <td><%= link_to 'Supprimer', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'Nouvel utilisateur', new_user_path %>
-
-<% if logged_in? &&  current_user.isadmin? %>
-  <%= "Vous êtes logger" %>
-  <%= "Admin Power is On" %>
-<% end %>
-
-<% if logged_in?  %>
-  <%= "Vous êtes logger en tant qu'#{current_user.username}" %>
-<%= session[:user] %>
-<% end %>
 

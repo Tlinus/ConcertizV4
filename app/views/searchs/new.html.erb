@@ -5,7 +5,7 @@
 <% end %>
 
 <%  @concert.each do |a| %>
-<%=    link_to a.name, concert_path(a) %>
+<%=    link_to a.name, concerts_utilisateur_path(a) %>
 <% end %>
 
 <%  @user.each do |a| %>
