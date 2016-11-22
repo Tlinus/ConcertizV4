@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   # before_action :is_admin, only: [:index]
   skip_before_action :require_login, only: [:new, :create, :show, :edit, :update]
-  skip_before_action :is_admin, only: [:new, :create, :show, :edit, :update]
+  skip_before_action :is_admin, only: [:new, :create, :show, :edit, :update, :mes_reservations]
 
   # GET /users
   # GET /users.json

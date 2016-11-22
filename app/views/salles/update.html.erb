@@ -1,0 +1,13 @@
+
+<%= form_for :salle, url: salles_path do |f| %>
+
+    <%= f.label :nom %>
+    <%= f.text_field :nom %>
+
+    <%= f.label :adresse %>
+    <%= f.text_field :adresse %>
+   
+    <%= f.submit "Créer" %>
+<% end %>
+
+<%= link_to 'Liste des concerts', concerts_path %>

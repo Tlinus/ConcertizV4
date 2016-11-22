@@ -14,6 +14,7 @@
       	<div id="nav" class="col-xs-5">
     	    <% if current_user %>
     	      <%= link_to "Editer mon profile", edit_user_path(current_user.id) %>
+            <%= link_to "Mon profile",  user_path(current_user.id) %>
     	      <%= link_to "Se déconnecter", :logout, method: :post %>
     	    <% else %>
     	      <%= link_to "S'inscrire", new_user_path %> |

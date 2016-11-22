@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161121160909) do
+ActiveRecord::Schema.define(version: 20161122123553) do
 
   create_table "artistes", force: :cascade do |t|
     t.string "nom"
@@ -67,12 +67,20 @@ ActiveRecord::Schema.define(version: 20161121160909) do
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
+  create_table "salles", force: :cascade do |t|
+    t.string "nom"
+    t.string "adresse"
+    t.string "coord"
+  end
+
   create_table "seances", force: :cascade do |t|
     t.date    "date"
     t.integer "concert_id"
     t.integer "artiste_id"
+    t.integer "salle_id"
     t.index ["artiste_id"], name: "index_seances_on_artiste_id"
     t.index ["concert_id"], name: "index_seances_on_concert_id"
+    t.index ["salle_id"], name: "index_seances_on_salle_id"
   end
 
   create_table "typesplaces", force: :cascade do |t|

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'salles/new'
+
+  get 'salles/:id(.:format)' => 'salles#show'
+
+  get 'salles/create'
+
+  get 'salles/show'
+
+  get 'salles/updtae'
+
   get 'monCompte' => 'users#mes_reservations'
   get 'concerts_utilisateur/index'
 
@@ -68,6 +78,6 @@ Rails.application.routes.draw do
   resources :user_sessions
   resources :commentaires
   resources :searchs
-  
+  resources :salles
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

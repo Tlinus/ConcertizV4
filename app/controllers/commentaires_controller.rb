@@ -1,4 +1,5 @@
 class CommentairesController < ApplicationController
+        skip_before_action :is_admin, only: [:create]
 
     def create 
         @commentaire = Commentaire.new(commentaires_params)

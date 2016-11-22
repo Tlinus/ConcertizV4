@@ -2,7 +2,14 @@
 	
 	Date :
 	<%= f.text_field :date %><br/>
-	
+
+	Salle : 
+	<%= f.select(:salle_id) do %>
+	<% 		@salles.each do |c|	%>
+	<%=  		content_tag(:option, c.nom, value: c.id) %>
+	<% 		end
+		end	
+	%>
 	Concert : 
 	<%= f.select(:concert_id) do %>
 	<% 		@concerts.each do |c|	%>

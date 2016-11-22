@@ -11,6 +11,7 @@ class SeancesController < ApplicationController
 	@seance = Seance.new
 	@concerts = Concert.all
 	@artistes = Artiste.all
+    @salles = Salle.all
   end
 
   def create
@@ -53,7 +54,7 @@ class SeancesController < ApplicationController
   
   	private
 	def seance_params
-		params.require(:seance).permit(:date, :concert_id, :artiste_id)
+		params.require(:seance).permit(:date, :concert_id, :artiste_id, :salle_id)
 	end
 
 end

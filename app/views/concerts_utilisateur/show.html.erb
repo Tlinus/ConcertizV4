@@ -6,16 +6,11 @@
 
 </p>
 <p>
+	<% if @seance = Seance.find_by(concert_id: @concert.id) %>
 	<strong> Artiste : </strong>
-<%
-@seance = Seance.find_by(concert_id: @concert.id)
-	@artistes.each do |a|
-		if a.id == @seance.artiste_id %>
-<%= 		a.nom %>
-
-<%      end
-	end
-%>
+	
+		<%=	Artiste.find( @seance.artiste_id).nom %>
+	<% end %>
 
 </p>
 <p>

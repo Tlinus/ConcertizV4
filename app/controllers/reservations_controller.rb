@@ -15,13 +15,14 @@ class ReservationsController < ApplicationController
 
   def create
 	@reservation = Reservation.new(reservation_params)
-	@reservation.save
-	if @reservation.save
+	@user= User.find(current_user.id)
+    if @reservation.save
 		@place = Place.find(@reservation.place_id)
 		unless @reservation.nombre_reservations > @place.places
 			@place.places -= @reservation.nombre_reservations
 			@place.save
 			if @place.save
+                UserMailer.confirmation_achat(@user).deliver_later
 				redirect_to @reservation
 			end
 		end
@@ -36,6 +37,7 @@ class ReservationsController < ApplicationController
 		@reservation = Reservation.find(params[:id])
 		
 		if @reservation.update(reservation_params)
+
 			redirect_to @reservation
 		else 
 			render 'edit'
