@@ -8,41 +8,34 @@ class ConcertsController < ApplicationController
 		@seances = Seance.all
 		@reservations = Reservation.all
 	end
+	def new
+		@concert = Concert.new
+		@genres = Genre.all
+	end
 
 	def show
-	  	@concert = Concert.find(params[:id])
-		@places = Place.all
-		@concerts = Concert.all
-		@genres = Genre.all
-		@typesplaces = Typesplace.all
+	  	@concert = Concert.find(params[:id])	
+		@place = Place.find_by(concert_id: @concert.id)
+		if @place
+			@typesplace = Typesplace.find(@place.typesplace_id)
+			@seance = Seance.find(@place.seance_id)
+			@artiste = Artiste.find(@seance.artiste_id)
+		end
+		@genre = Genre.find(@concert.genre_id)
 		@seances = Seance.all
-		@artistes = Artiste.all
+		@typesplaces = Typesplace.all
+		@places = Place.all
 	end
 
 	def edit
 		@concert = Concert.find(params[:id])
-		@genres = Genre.all
-		@artistes = Artiste.all
-		@typesplaces = Typesplace.all
-		@seances = Seance.all
-	end
-
-	def new
-		@concert = Concert.new
-		@genre = Genre.new
-		@artiste = Artiste.new
-		@typesplace = Typesplace.new
-		@place = Place.new
-		@genres = Genre.all
-		@seances = Seance.all
 	end
 
 	def create
-		@genres = Genre.all
 		@concert = Concert.new(concert_params)
 		@concert.save
 		if @concert.save
-			redirect_to @concert
+			redirect_to concerts_path
 		else
 			redirect_to :back
 		end
@@ -81,6 +74,6 @@ class ConcertsController < ApplicationController
 	
 	private
 	def concert_params
-		params.require(:concert).permit(:name, :genre_id)
+		params.require(:concert).permit(:name, :genre_id, genre_attributes: [:date, :concert_id])
 	end
 end

@@ -5,13 +5,11 @@
 	<%= f.label :nom %>
 	<%= f.text_field :name %>
 	<%= f.select(:genre_id) do %>
-	
-	<% 		@genres.each do |g|	%>
-	<%=  		content_tag(:option, g.nom, value: g.id) %>
-	<% 		end
-		end 
+	<%		@genres.each do |g| %>
+	<%=			content_tag(:option, g.nom, value: g.id) %>
+	<%		end
+		end
 	%>
-
 	<%= f.submit "Créer" %>
 <% end %>
 

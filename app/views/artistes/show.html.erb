@@ -13,6 +13,10 @@
 	<% concert  = Concert.find(s.concert_id) %>
 
 	<%= link_to "#{concert.name}/#{s.date}", concerts_path(concert) %>
-<% end %>
 
+<% end %>
+<% unless seances.count > 0 %>
+    <%= "Cette artiste n à pas de date prévu prochainement" %>
+<% end %>
+<br>
 <%= link_to 'Accueil', concerts_path %>

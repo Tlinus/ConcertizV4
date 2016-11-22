@@ -10,42 +10,33 @@
 	%>
 </p>
 <p>
+<% 	if @place %>
 	<strong> Artiste : </strong>
-<%
-@seance = Seance.find_by(concert_id: @concert.id)
-	@artistes.each do |a|
-		if a.id == @seance.artiste_id %>
-<%= 		a.nom %>
-<%= 		link_to "Edit", edit_artiste_path(a) %>
-<%= 		link_to "Destroy", artiste_path(a),
-			method: :delete,
-			data: {confirm: "Etes vous sûr ?"} %>
-<%      end
-	end
-%>
-
-</p>
-<p>
-	<strong> Genre : </strong>
-<% 	@genres.each do |genre| %>
-	<% 	if @concert.genre_id == genre.id %>
-		<%= genre.nom %>
-		<%= link_to "Edit", edit_genre_path(genre) %>
-		<%= link_to "Destroy", genre_path(genre),
-			method: :delete,
-			data: {confirm: "Etes vous sûr ?"} %> <br/>
-	<% end %>
+	<%= @artiste.nom %>
+	<%= link_to "Edit", edit_artiste_path(@artiste) %>
+	<%= link_to "Destroy", artiste_path(@artiste),
+		method: :delete,
+		data: {confirm: "Etes vous sûr ?"} %>
 <% end %>
 </p>
 <p>
-<strong> Seances : </strong> <br/>
+	<strong> Genre : </strong>
+<%= 	@genre.nom %>
+<%= 	link_to "Edit", edit_genre_path(@genre) %>
+<%= 	link_to "Destroy", genre_path(@genre),
+		method: :delete,
+		data: {confirm: "Etes vous sûr ?"} %>
+</p>
+<p>
+
+<strong> Seances : </strong> 
 <%	@seances.each do |seance| %>
 <%		if seance.concert_id == @concert.id %>
 <%=			seance.date %>
 <%= 		link_to "Edit", edit_seance_path(seance) %>
 <%= 		link_to "Destroy", seance_path(seance),
 			method: :delete,
-			data: {confirm: "Etes vous sûr ?"} %>
+			data: {confirm: "Etes vous sûr ?"} %>			
 <%
 			@typesplaces.each do |typesplace|
 				@places.each do |place|
